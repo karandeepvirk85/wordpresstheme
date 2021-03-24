@@ -1,0 +1,366 @@
+@charset "UTF-8";
+/*
+Theme Name: Next Page
+Theme URI: https://nextpageit.com
+Author: Next Page Team
+Author URI: https://nextpageit.com
+Description: Next Page Wordpress Theme
+Requires PHP: 5.6
+Version: 1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+@import url(https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap);
+$top-notification-bar-background: #202020;
+$font-lato: "Lato", sans-serif;
+$font-montserrat: "Montserrat", sans-serif;
+$font-open-sans: "Open Sans", sans-serif;
+$font-playfair: "Playfair Display", serif;
+$primary-color: #6a3494;
+$post-link-color: #1ee08d;
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root("::-webkit-input-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root(":-moz-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root("::-moz-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root(":-ms-input-placeholder") {
+    @content;
+  }
+}
+
+.top-notification-bar {
+  background-color: $top-notification-bar-background;
+  p {
+    font-family: $font-lato;
+    font-style: normal;
+    font-weight: normal;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1rem;
+    padding: 6px;
+  }
+}
+.header-container {
+  padding: 0 10rem 16px 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid $primary-color;
+  .right-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    form {
+      padding: 10px 1rem;
+      .search-box {
+        background: #fdfdfd;
+        background-image: url(images/search.svg);
+        background-position: 95% 10px;
+        background-repeat: no-repeat;
+        border: 1px solid #ebebeb;
+        box-sizing: border-box;
+        border-radius: 300px;
+        padding: 10px 2.5rem;
+        padding-left: 30px;
+        @include placeholder {
+          color: #b3b3b3;
+        }
+      }
+    }
+    .links-container {
+      a {
+        padding: 10px 1.5rem;
+        font-family: $font-montserrat;
+        font-weight: 400;
+        font-size: 1.3rem;
+        color: #000000;
+        &.active-menu {
+          color: $primary-color;
+          font-weight: 700;
+          border-bottom: 2px solid $primary-color;
+        }
+      }
+    }
+    .cart-icon-container {
+      padding: 10px 1rem;
+    }
+  }
+}
+.footer-main-container {
+  padding: 0 10rem;
+  margin-top: 40px;
+  .footer-container {
+    .footer-text-container {
+      max-width: 60%;
+      padding-top: 14px;
+      padding-left: 16px;
+      p {
+        color: #3a3a3a;
+        font-family: $font-open-sans;
+      }
+    }
+  }
+  .footer-navbar {
+    display: flex;
+    padding-top: 16px;
+    padding-left: 16px;
+    justify-content: space-between;
+    .footer-links {
+      width: 40%;
+      display: flex;
+      justify-content: space-between;
+      a {
+        color: #3a3a3a;
+      }
+    }
+    .footer-social-links {
+      a {
+        color: $primary-color;
+        font-size: 1.4rem;
+        padding: 3px;
+      }
+    }
+  }
+}
+.footer-bottom-bar {
+  background-color: #202020;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 8px 10rem;
+  margin-top: 50px;
+  .footer-left-container {
+    p {
+      color: white;
+      margin: 0;
+    }
+  }
+  .footer-right-container {
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    p {
+      color: white;
+      margin: 0;
+    }
+    span {
+      color: white;
+    }
+  }
+}
+
+.page-container {
+  padding: 0 8rem;
+  .woocommerce-loop-product__title {
+    color: $primary-color;
+    font-weight: 700;
+    font-family: $font-playfair;
+    text-align: center;
+  }
+
+  .woocommerce ul.products li {
+    text-align: center;
+    &.product {
+      .button {
+        margin-top: 1em;
+        background-color: $primary-color;
+        border-radius: 300px;
+        border: none;
+        color: #ffffff;
+      }
+    }
+  }
+  h1.page-header-center {
+    color: $primary-color;
+    font-family: $font-playfair;
+    font-weight: 700;
+    text-align: center;
+  }
+  .entry-content {
+    font-family: $font-open-sans;
+    padding-bottom: 20px;
+  }
+
+  .posts-row {
+    .posts-column {
+      padding: 10px;
+      .post-container {
+        .post-top-container {
+          .post-image {
+            padding: 100px 1rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: inset -2px -2px 20px 0px #000000;
+          }
+        }
+        .post-bottom-container {
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          box-sizing: border-box;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          padding: 0px 2rem 20px 2rem;
+
+          .post-meta-container {
+            display: flex;
+            justify-content: flex-start;
+            font-family: $font-montserrat;
+            font-family: 700;
+            width: 100%;
+            color: black;
+            align-items: center;
+            margin-top: 8px;
+            .post-date {
+              color: #3a3a3a;
+              font-size: 1.3rem;
+              font-family: $font-montserrat;
+            }
+            .post-author {
+              font-family: $font-montserrat;
+              font-weight: 700;
+              font-size: 1.3rem;
+            }
+            .divider {
+              padding: 0 1rem;
+            }
+          }
+          .post-title-container {
+            margin-top: 10px;
+            color: $primary-color;
+            font-family: $font-playfair;
+            font-size: 1.6rem;
+          }
+          .post-content-container {
+            margin-top: 6px;
+            color: #414141;
+            font-family: $font-montserrat;
+            font-size: 1.2rem;
+            text-decoration: none;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+          .read-more-container {
+            margin-top: 10px;
+            .read-more-link {
+              text-decoration: underline;
+              font-weight: 700;
+              font-family: $font-open-sans;
+              color: $post-link-color;
+              letter-spacing: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .pagination-container {
+    margin-top: 30px;
+    text-align: center;
+    .pagination {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .pagination-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .current {
+          color: #ffffff;
+          background-color: $primary-color;
+          padding: 8px 16px;
+          border-top-left-radius: 30px;
+          border-bottom-left-radius: 30px;
+          font-family: $font-montserrat;
+          font-size: 1.1rem;
+        }
+        a {
+          color: #444444;
+          border: 1px solid #dadada;
+          padding: 8px 16px;
+          font-family: $font-montserrat;
+          font-size: 1.1rem;
+          &:last-child {
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+          }
+        }
+      }
+    }
+  }
+  .sidbar-container {
+    .categories-container {
+      background: #ffffff;
+      padding: 10px 1.5rem;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      h2 {
+        font-family: $font-playfair;
+        color: $primary-color;
+        margin: 0 0 14px 0px;
+        font-size: 2.2rem;
+      }
+      p {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        a {
+          font-family: $font-montserrat;
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: #414141;
+        }
+      }
+    }
+
+    .recent-post-container {
+      margin-top: 40px;
+      background: #ffffff;
+      padding: 10px 1.5rem;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      h2 {
+        font-family: $font-playfair;
+        color: $primary-color;
+        margin: 0 0 14px 0px;
+        font-size: 2.2rem;
+      }
+      ul {
+        padding: 0 0 0 1.8rem;
+        li {
+          font-size: 2rem;
+          line-height: 14px;
+          margin: 8px 0;
+          a {
+            font-family: $font-montserrat;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #414141;
+            p {
+              margin: 0;
+              &.recent-post-date {
+                color: rgb(139, 139, 139);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
