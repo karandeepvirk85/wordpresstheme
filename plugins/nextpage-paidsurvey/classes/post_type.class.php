@@ -5,8 +5,6 @@ if( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Post Type class used to register post types
  *
- * @author 	Gijs Jorissen
- * @since 	0.1
  *
  */
 class Cuztom_Post_Type
@@ -26,8 +24,6 @@ class Cuztom_Post_Type
 	 * @param 	array 			$args
 	 * @param 	array 			$labels
 	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	0.1
 	 *
 	 */
 	function __construct( $name, $args = array(), $labels = array() )
@@ -68,8 +64,6 @@ class Cuztom_Post_Type
 	/**
 	 * Register the Post Type
 	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	0.1
 	 *
 	 */
 	function register_post_type()
@@ -119,8 +113,6 @@ class Cuztom_Post_Type
 	 * @param 	array 			$labels
 	 * @return  object 			Cuztom_Post_Type
 	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	0.1
 	 *
 	 */
 	function add_taxonomy( $name, $args = array(), $labels = array() )
@@ -141,9 +133,6 @@ class Cuztom_Post_Type
 	 * @param 	string 			$context
 	 * @param 	string 			$priority
 	 * @return  object 			Cuztom_Post_Type
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	0.1
 	 *
 	 */
 	function add_meta_box( $id, $title, $fields = array(), $context = 'normal', $priority = 'default' )
@@ -232,9 +221,6 @@ class Cuztom_Post_Type
 	 * @param 	string|array 	$feature 			The feature being added, can be an array of feature strings or a single string
 	 * @return 	object 			Cuztom_Post_Type
 	 *
-	 * @author 	Abhinav Sood
-	 * @since 	1.4.3
-	 *
 	 */
 	function add_post_type_support( $feature )
 	{
@@ -249,8 +235,6 @@ class Cuztom_Post_Type
 	/**
 	 * Register support of certain features for a post type.
 	 *
-	 * @author 	Abhinav Sood
-	 * @since 	1.4.3
 	 *
 	 */
 	function _add_post_type_support()
@@ -264,8 +248,6 @@ class Cuztom_Post_Type
 	 * @param 	string|array 	$feature 			The feature being removed, can be an array of feature strings or a single string
 	 * @return 	object 			Cuztom_Post_Type
 	 *
-	 * @author 	Abhinav Sood
-	 * @since 	1.4.3
 	 *
 	 */
 	function remove_post_type_support( $feature )
@@ -281,8 +263,6 @@ class Cuztom_Post_Type
 	/**
 	 * Remove support of certain features for a post type.
 	 *
-	 * @author 	Abhinav Sood
-	 * @since 	1.4.3
 	 *
 	 */
 	function _remove_post_type_support()
@@ -298,9 +278,6 @@ class Cuztom_Post_Type
 	 *
 	 * @param 	string  		$feature    		The feature to check support for
 	 * @return  boolean
-	 *
-	 * @author 	Abhinav Sood
-	 * @since 	1.5.3
 	 *
 	 */
 	function post_type_supports( $feature )

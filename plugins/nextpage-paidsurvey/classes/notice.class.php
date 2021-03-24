@@ -5,8 +5,6 @@ if( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Cuztom notice class, to easily handle admin notices
  *
- * @author  Gijs Jorissen
- * @since  	2.3
  */
 class Cuztom_Notice
 {
@@ -18,9 +16,6 @@ class Cuztom_Notice
 	 * 
 	 * @param  	string 	$notice 
 	 * @param 	string 	$type
-	 *
-	 * @author  Gijs Jorissen
-	 * @since   2.3
 	 * 
 	 */
 	function __construct( $notice, $type = 'updated' )
@@ -33,9 +28,6 @@ class Cuztom_Notice
 
 	/**
 	 * Adds the admin notice
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since   2.3
 	 * 
 	 */
 	function add_admin_notice()

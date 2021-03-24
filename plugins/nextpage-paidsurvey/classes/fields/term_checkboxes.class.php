@@ -54,8 +54,6 @@ class Cuztom_Field_Term_Checkboxes extends Cuztom_Field
 	/**
 	 * Gets taxonomy terms for use in the output
 	 *
-	 * @author 	Abhinav Sood
-	 * @since 	1.6.1
 	 *
 	 */
 	function get_taxonomy_terms()

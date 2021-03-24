@@ -5,8 +5,6 @@ if( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Registers the meta boxes
  *
- * @author 	Gijs Jorissen
- * @since 	0.2
  *
  */
 class Cuztom_Meta_Box extends Cuztom_Meta
@@ -24,9 +22,6 @@ class Cuztom_Meta_Box extends Cuztom_Meta
 	 * @param 	string 			$post_type_name
 	 * @param 	string 			$context
 	 * @param 	string 			$priority
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	0.2
 	 *
 	 */
 	function __construct( $id, $title, $post_type, $data = array(), $context = 'normal', $priority = 'default' )
@@ -71,9 +66,6 @@ class Cuztom_Meta_Box extends Cuztom_Meta
 	/**
 	 * Method that calls the add_meta_box function
 	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	0.2
-	 *
 	 */
 	function add_meta_box()
 	{
@@ -92,9 +84,6 @@ class Cuztom_Meta_Box extends Cuztom_Meta
 
 	/**
 	 * Hooks into the save hook for the newly registered Post Type
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	0.1
 	 *
 	 */
 	function save_post( $post_id )
@@ -121,8 +110,6 @@ class Cuztom_Meta_Box extends Cuztom_Meta
 	/**
 	 * Normal save method to save all the fields in a metabox
 	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	2.6
 	 */
 	function save( $post_id, $values )
 	{
@@ -142,9 +129,6 @@ class Cuztom_Meta_Box extends Cuztom_Meta
 	 *
 	 * @param 	array 			$columns
 	 * @return 	array
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	1.1
 	 *
 	 */
 	function add_column( $columns )
@@ -166,9 +150,6 @@ class Cuztom_Meta_Box extends Cuztom_Meta
 	 * @param 	string 			$column
 	 * @param 	integer 		$post_id
 	 * @return 	mixed
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	1.1
 	 *
 	 */
 	function add_column_content( $column, $post_id )
@@ -204,9 +185,6 @@ class Cuztom_Meta_Box extends Cuztom_Meta
 	 *
 	 * @param 	array 			$columns
 	 * @return  array
-	 *
-	 * @author  Gijs Jorissen
-	 * @since   1.4.8
 	 *
 	 */
 	function add_sortable_column( $columns )

@@ -32,10 +32,6 @@ class Cuztom_Field_Datetime extends Cuztom_Field
 	 * with jQuery equivalent codeword
 	 *
 	 * @param 	string 			$php_format
-	 *
-	 * @author 	Tristan Jahier
-	 * @since 	2.9
-	 *
 	 */
 	function parse_date_format( $php_format )
 	{

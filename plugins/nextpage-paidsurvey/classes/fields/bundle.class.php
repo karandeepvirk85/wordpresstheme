@@ -16,8 +16,6 @@ class Cuztom_Bundle
 	 * @param   int  		$id
 	 * @param 	array 		$data
 	 *
-	 * @author  Gijs Jorissen
-	 * @since 	2.8.4
 	 *
 	 */
 	function __construct( $id, $data )
@@ -38,9 +36,6 @@ class Cuztom_Bundle
 	 *
 	 * @param  	object 			$post
 	 * @param   string 			$meta_type
-	 *
-	 * @author  Gijs Jorissen
-	 * @since   1.6.5
 	 *
 	 */
 	function output( $post )
@@ -226,9 +221,6 @@ class Cuztom_Bundle
 	 * @param  	int 			$post_id
 	 * @param  	string 			$value
 	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	1.6.2
-	 *
 	 */
 	function save( $object_id, $values )
 	{
@@ -258,9 +250,6 @@ class Cuztom_Bundle
 	 * Build the id for the bundle
 	 *
 	 * @return  string
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	2.7
 	 *
 	 */
 	function build_id( $id )

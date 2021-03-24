@@ -22,16 +22,10 @@ class Cuztom_Field_Time extends Cuztom_Field
 		return '<input type="text" ' . $this->output_name() . ' ' . $this->output_id() . ' ' . $this->output_css_class() . ' value="' . ( ! empty( $value ) ? ( isset( $this->args['time_format'] ) ? date( $this->args['time_format'], $value ) : date( 'H:i', $value ) ) : $this->default_value ) . '" ' . $this->output_data_attributes() . ' />' . $this->output_explanation(); }
 
 
-	function save_value( $value )
-	{
+	function save_value( $value){
 		return strtotime( $value );
 	}
 
-	/*
-	 * Matches each symbol of PHP date format standard
-	 * with jQuery equivalent codeword
-	 * @author Tristan Jahier
-	 */
 	function parse_date_format($php_format) {
 		$SYMBOLS_MATCHING = array(
 			// Day

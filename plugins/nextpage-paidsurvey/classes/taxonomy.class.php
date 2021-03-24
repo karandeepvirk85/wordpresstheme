@@ -5,8 +5,6 @@ if( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Creates custom taxonomies
  *
- * @author 	Gijs Jorissen
- * @since 	0.2
  *
  */
 class Cuztom_Taxonomy
@@ -26,9 +24,6 @@ class Cuztom_Taxonomy
 	 * @param 	string 			$post_type
 	 * @param 	array 			$args
 	 * @param 	array 			$labels
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	0.2
 	 *
 	 */
 	function __construct( $name, $post_type = null, $args = array(), $labels = array() )
@@ -92,8 +87,6 @@ class Cuztom_Taxonomy
 	/**
 	 * Registers the custom taxonomy with the given arguments
 	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	0.2
 	 *
 	 */
 	function register_taxonomy()
@@ -137,8 +130,6 @@ class Cuztom_Taxonomy
 	/**
 	 * Used to attach the existing taxonomy to the post type
 	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	0.2
 	 *
 	 */
 	function register_taxonomy_for_object_type()
@@ -150,9 +141,6 @@ class Cuztom_Taxonomy
 	 * Add term meta to this taxonomy
 	 *
 	 * @param 	array 			$data
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	2.5
 	 *
 	 */
 	function add_term_meta( $data = array() )
@@ -168,8 +156,6 @@ class Cuztom_Taxonomy
 	 * @param 	array 			$columns
 	 * @return 	array
 	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	1.6
 	 *
 	 */
 	function add_column( $columns )
@@ -189,8 +175,6 @@ class Cuztom_Taxonomy
 	 * @param 	integer 		$post_id
 	 * @return 	mixed
 	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	1.6
 	 *
 	 */
 	function add_column_content( $column, $post_id )
@@ -209,8 +193,6 @@ class Cuztom_Taxonomy
 	 * @param 	array 			$columns
 	 * @return  array
 	 *
-	 * @author  Gijs Jorissen
-	 * @since   1.6
 	 *
 	 */
 	function add_sortable_column( $columns )
@@ -223,8 +205,6 @@ class Cuztom_Taxonomy
 	/**
 	 * Adds a filter to the post table filters
 	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	1.6
 	 *
 	 */
 	function _post_filter()
@@ -251,8 +231,6 @@ class Cuztom_Taxonomy
 	 *
 	 * @param 	object 			$query
 	 *
-	 * @author  Gijs Jorissen
-	 * @since  	1.6
 	 *
 	 */
 	function _post_filter_query( $query )

@@ -5,8 +5,6 @@ if( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Creates custom Options Page
  *
- * @author 	Gijs Jorissen
- * @since 	0.2
  *
  */
 class Cuztom_Options extends Cuztom_Meta

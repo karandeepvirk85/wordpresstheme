@@ -5,9 +5,6 @@ if( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Cuztom Meta for handling meta data
  *
- * @author 	Gijs Jorissen
- * @since 	1.5
- *
  */
 class Cuztom_Meta
 {
@@ -20,11 +17,7 @@ class Cuztom_Meta
 
 	/**
 	 * Construct for all meta types, creates title (and description)
-	 *
 	 * @param 	string|array 	$title
-	 *
-	 * @author  Gijs Jorissen
-	 * @since 	1.6.4
 	 *
 	 */
 	function __construct( $title )
@@ -46,9 +39,6 @@ class Cuztom_Meta
 	 * @param 	object 			$post
 	 * @param 	object 			$data
 	 * @return 	mixed
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	0.2
 	 *
 	 */
 	function callback( $object, $data = array() )
@@ -123,9 +113,6 @@ class Cuztom_Meta
 	/**
 	 * Normal save method to save all the fields in a metabox
 	 * Metabox and User Meta rely on this method
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	2.6
 	 */
 	function save( $object_id, $values )
 	{
@@ -164,9 +151,6 @@ class Cuztom_Meta
 	 *
 	 * @return  string
 	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	1.5
-	 *
 	 */
 	function get_meta_type()
 	{
@@ -194,9 +178,6 @@ class Cuztom_Meta
 	 *
 	 * @return  string
 	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	2.3
-	 *
 	 */
 	function is_meta_type( $meta_type )
 	{
@@ -209,12 +190,8 @@ class Cuztom_Meta
 	 * @param 	array 			$data
 	 * @return 	boolean
 	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	1.3
-	 *
 	 */
-	static function is_tabs( $data )
-	{
+	static function is_tabs( $data ){
 		return isset( $data[0] ) && ( ! is_array( $data[0] ) ) && ( $data[0] == 'tabs' );
 	}
 
@@ -224,12 +201,8 @@ class Cuztom_Meta
 	 * @param 	array 			$data
 	 * @return 	bool
 	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	1.3
-	 *
 	 */
-	static function is_accordion( $data )
-	{
+	static function is_accordion( $data ){
 		return isset( $data[0] ) && ( ! is_array( $data[0] ) ) && ( $data[0] == 'accordion' );
 	}
 
@@ -238,9 +211,6 @@ class Cuztom_Meta
 	 *
 	 * @param 	array 			$data
 	 * @return 	bool
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	1.3
 	 *
 	 */
 	static function is_bundle( $data )
@@ -253,9 +223,6 @@ class Cuztom_Meta
 	 *
 	 * @param 	array 			$data
 	 * @return 	array
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	1.1
 	 *
 	 */
 	function build( $data, $parent = null )
@@ -356,9 +323,6 @@ class Cuztom_Meta
 	 * Adds multipart support to form
 	 *
 	 * @return 	mixed
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	0.2
 	 *
 	 */
 	static function edit_form_tag()

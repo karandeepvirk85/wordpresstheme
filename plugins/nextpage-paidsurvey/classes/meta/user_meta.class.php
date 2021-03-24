@@ -5,8 +5,6 @@ if( ! defined( 'ABSPATH' ) ) exit;
 /**
  * User Meta
  *
- * @author 	Gijs Jorissen
- * @since 	1.5
  *
  */
 class Cuztom_User_Meta extends Cuztom_Meta
@@ -20,9 +18,6 @@ class Cuztom_User_Meta extends Cuztom_Meta
 	 * @param 	string|array	$title
 	 * @param 	string|array 	$locations
 	 * @param 	array  			$data
-	 *
-	 * @author  Gijs Jorissen
-	 * @since   1.5
 	 * 
 	 */
 	function __construct( $id, $title, $locations, $data = array() )
@@ -59,8 +54,6 @@ class Cuztom_User_Meta extends Cuztom_Meta
 	 * @param  	int     			$user [description]
 	 * @param  	array    	$data [description]
 	 *
-	 * @author  Gijs Jorissen
-	 * @since   1.5
 	 * 
 	 */
 	function callback( $user, $data = array() )
@@ -73,8 +66,6 @@ class Cuztom_User_Meta extends Cuztom_Meta
 	/**
 	 * Hooks into the save hook for the user meta
 	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	1.5
 	 *
 	 */
 	function save_user( $user_id )
@@ -91,8 +82,6 @@ class Cuztom_User_Meta extends Cuztom_Meta
 	/**
 	 * Normal save method to save all the fields in a metabox
 	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	2.6
 	 */
 	function save( $user_id, $values )
 	{

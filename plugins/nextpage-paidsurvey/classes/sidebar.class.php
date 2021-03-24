@@ -5,8 +5,6 @@ if( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Registers sidebars
  *
- * @author 	Gijs Jorissen
- * @since 	0.5
  *
  */
 class Cuztom_Sidebar
@@ -17,9 +15,6 @@ class Cuztom_Sidebar
 	 * Constructor
 	 *
 	 * @param 	array		$args
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	0.5
 	 *
 	 */
 	function __construct( $args = array() )
@@ -40,9 +35,6 @@ class Cuztom_Sidebar
 	
 	/**
 	 * Register the Sidebar
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	0.1
 	 *
 	 */
 	function register_sidebar()

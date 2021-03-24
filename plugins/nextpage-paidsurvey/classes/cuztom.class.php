@@ -2,13 +2,6 @@
 
 if( ! defined( 'ABSPATH' ) ) exit;
 
-/**
- * General class with main methods and helper methods
- *
- * @author 	Gijs Jorissen
- * @since 	0.2
- *
- */
 class Cuztom
 {
 	static $_reserved = array( 'attachment', 'attachment_id', 'author', 'author_name', 'calendar', 'cat', 'category','category__and', 'category__in', 'category__not_in',
@@ -19,48 +12,15 @@ class Cuztom
 		'static', 'subpost', 'subpost_id', 'tag', 'tag__and', 'tag__in','tag__not_in', 'tag_id', 'tag_slug__and', 'tag_slug__in', 'taxonomy',
 		'tb', 'term', 'type', 'w', 'withcomments', 'withoutcomments', 'year' );
 
-	/**
-	 * Beautifies a string. Capitalize words and remove underscores
-	 *
-	 * @param 	string 			$string
-	 * @return 	string
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	0.1
-	 *
-	 */
-	static function beautify( $string )
-	{
+	static function beautify( $string ){
 		return apply_filters( 'cuztom_beautify', ucwords( str_replace( '_', ' ', $string ) ) );
 	}
 
-	/**
-	 * Uglifies a string. Remove strange characters and lower strings
-	 *
-	 * @param 	string 			$string
-	 * @return 	string
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	0.1
-	 *
-	 */
-	static function uglify( $string )
-	{
+	static function uglify( $string){
 		return apply_filters( 'cuztom_uglify', str_replace( '-', '_', sanitize_title( $string ) ) );
 	}
 
-	/**
-	 * Makes a word plural
-	 *
-	 * @param 	string 			$string
-	 * @return 	string
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	0.1
-	 *
-	 */
-	static function pluralize( $string )
-	{
+	static function pluralize( $string){
 		$plural = array(
 			array( '/(quiz)$/i',               "$1zes"   ),
 			array( '/^(ox)$/i',                "$1en"    ),
@@ -123,35 +83,11 @@ class Cuztom
 		return apply_filters( 'cuztom_pluralize', $string );
 	}
 
-	/**
-	 * Checks if the callback is a Wordpress callback
-	 * So, if the class, method and/or function exists. If so, call it.
-	 * If it doesn't use the data array (cuztom).
-	 *
-	 * @param	string|array   	$callback
-	 * @return 	boolean
-	 *
-	 * @author  Gijs Jorissen
-	 * @since 	1.5
-	 *
-	 */
-	static function is_wp_callback( $callback )
-	{
+	static function is_wp_callback( $callback ){
 		return ( ! is_array( $callback ) ) || ( is_array( $callback ) && ( ( isset( $callback[1] ) && ! is_array( $callback[1] ) && method_exists( $callback[0], $callback[1] ) ) || ( isset( $callback[0] ) && ! is_array( $callback[0] ) && class_exists( $callback[0] ) ) ) );
 	}
 
-	/**
-	 * Check if the term is reserved by Wordpress
-	 *
-	 * @param  	string  		$term
-	 * @return 	boolean
-	 *
-	 * @author  Gijs Jorissen
-	 * @since  	1.6
-	 *
-	 */
-	static function is_reserved_term( $term )
-	{
+	static function is_reserved_term( $term ){
 		if( ! in_array( $term, self::$_reserved ) ) return false;
 
 		return new WP_Error( 'reserved_term_used', __( 'Use of a reserved term.', 'cuztom' ) );

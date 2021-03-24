@@ -5,8 +5,6 @@ if( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Registers the meta boxes
  *
- * @author 	Gijs Jorissen
- * @since 	2.5
  *
  */
 class Cuztom_Term_Meta extends Cuztom_Meta
@@ -21,9 +19,6 @@ class Cuztom_Term_Meta extends Cuztom_Meta
 	 *
 	 * @param 	string|array 	$taxonomy
 	 * @param 	array  			$data
-	 *
-	 * @author 	Gijs Jorissen
- 	 * @since 	2.5
 	 */
 	function __construct( $taxonomy, $data = array(), $locations = array( 'add_form', 'edit_form' ) )
 	{
@@ -56,9 +51,6 @@ class Cuztom_Term_Meta extends Cuztom_Meta
 	 * Add fields to the add term form
 	 *
 	 * @param 	string 		$taxonomy
-	 *
-	 * @author 	Gijs Jorissen
- 	 * @since 	2.5
 	 */
 	function add_form_fields( $taxonomy )
 	{
@@ -89,9 +81,6 @@ class Cuztom_Term_Meta extends Cuztom_Meta
 	 * Add fields to the edit term form
 	 *
 	 * @param 	string 		$term
-	 *
-	 * @author 	Gijs Jorissen
- 	 * @since 	2.5
 	 */
 	function edit_form_fields( $term )
 	{
@@ -127,10 +116,8 @@ class Cuztom_Term_Meta extends Cuztom_Meta
 	 * Save the term
 	 *
 	 * @param 	int 		$term_id
-	 *
-	 * @author 	Gijs Jorissen
- 	 * @since 	2.5
 	 */
+
 	function save_term( $term_id )
 	{
 		// Loop through each meta box
@@ -155,9 +142,6 @@ class Cuztom_Term_Meta extends Cuztom_Meta
 	 * @param 	array 			$columns
 	 * @return 	array
 	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	1.1
-	 *
 	 */
 	function add_column( $columns )
 	{
@@ -174,9 +158,6 @@ class Cuztom_Term_Meta extends Cuztom_Meta
 	 * @param 	integer 		$column
 	 * @param 	integer 		$term_id
 	 * @return 	mixed
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	1.1
 	 *
 	 */
 	function add_column_content( $row, $column, $term_id )

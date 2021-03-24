@@ -4,10 +4,7 @@ if( ! defined( 'ABSPATH' ) ) exit;
 
 /**
  * Cuztom Field Class
- *
- * @author 	Gijs Jorissen
- * @since 	0.3.3
- *
+ * 
  */
 class Cuztom_Field
 {
@@ -48,13 +45,6 @@ class Cuztom_Field
 	/**
 	 * Constructs a Cuztom_Field
 	 *
-	 * @param 	array 			$field
-	 * @param 	string 			$parent
-	 * @param   string 			$meta_type
-	 *
-	 * @author  Gijs Jorissen
-	 * @since 	0.3.3
-	 *
 	 */
 	function __construct( $field, $parent )
 	{
@@ -85,12 +75,6 @@ class Cuztom_Field
 	/**
 	 * Outputs a field based on its type
 	 *
-	 * @param 	string|array 	$value
-	 * @return  mixed
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	0.2
-	 *
 	 */
 	function output( $value )
 	{
@@ -106,13 +90,6 @@ class Cuztom_Field
 	 * Output method
 	 * Defaults to a normal text field
 	 *
-	 * @param 	string|array 	$value
-	 * @param   object 			$object
-	 * @return  mixed
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	2.4
-	 *
 	 */
 	function _output( $value )
 	{
@@ -122,13 +99,8 @@ class Cuztom_Field
 	/**
 	 * Outputs the field, ready for repeatable functionality
 	 *
-	 * @param  	string|array 	$value
-	 * @return  mixed 			$output
-	 *
-	 * @author  Gijs Jorissen
-	 * @since   2.0
-	 *
 	 */
+
 	function _repeatable_output( $value )
 	{
 		$this->after = '[]';
@@ -152,10 +124,6 @@ class Cuztom_Field
 	 *
 	 * @param  	string|array 	$value
 	 * @return  mixed 			$output
-	 *
-	 * @author  Gijs Jorissen
-	 * @since   2.0
-	 *
 	 */
 	function _ajax_output( $value )
 	{
@@ -167,12 +135,8 @@ class Cuztom_Field
 
 	/**
 	 * Save meta
-	 *
 	 * @param  	int 			$object_id
 	 * @param  	string 			$value
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since  	1.6.2
 	 *
 	 */
 	function save( $object_id, $value )
@@ -192,11 +156,6 @@ class Cuztom_Field
 	/**
 	 * Output save value
 	 *
-	 * @param  	string 			$value
-	 *
-	 * @author 	Ante Primorac
-	 * @since  	2.8
-	 *
 	 */
 	function save_value( $value )
 	{
@@ -204,10 +163,6 @@ class Cuztom_Field
 	}
 
 	/**
-	 * Saves an ajax field
-	 *
-	 * @author  Gijs Jorissen
-	 * @since  	2.0
 	 *
 	 */
 	function ajax_save()
@@ -236,10 +191,8 @@ class Cuztom_Field
 
 	/**
 	 * Outputs the fields name attribute
-	 *
-	 * @author  Gijs Jorissen
-	 * @since  	2.4
-	 *
+	 * 
+	 * 
 	 */
 	function output_name( $overwrite = null )
 	{
@@ -252,10 +205,8 @@ class Cuztom_Field
 
 	/**
 	 * Outputs the fields id attribute
-	 *
-	 * @author  Gijs Jorissen
-	 * @since  	2.4
-	 *
+	 * 
+	 * 
 	 */
 	function output_id( $overwrite = null )
 	{
@@ -265,10 +216,6 @@ class Cuztom_Field
 	/**
 	 * Outputs the fields css classes
 	 *
-	 * @param 	array 			$extra
-	 *
-	 * @author  Gijs Jorissen
-	 * @since  	2.4
 	 *
 	 */
 	function output_css_class( $extra = array() )
@@ -280,11 +227,6 @@ class Cuztom_Field
 
 	/**
 	 * Outputs the fields data attributes
-	 *
-	 * @param 	array 			$extra
-	 *
-	 * @author  Gijs Jorissen
-	 * @since  	2.4
 	 *
 	 */
 	function output_data_attributes( $extra = array() )
@@ -305,8 +247,6 @@ class Cuztom_Field
 	/**
 	 * Outputs the for attribute
 	 *
-	 * @author  Gijs Jorissen
-	 * @since  	2.4
 	 *
 	 */
 	function output_for_attribute( $for = null )
@@ -317,8 +257,6 @@ class Cuztom_Field
 	/**
 	 * Outputs the fields explanation
 	 *
-	 * @author  Gijs Jorissen
-	 * @since  	2.4
 	 *
 	 */
 	function output_explanation()
@@ -332,9 +270,6 @@ class Cuztom_Field
 	 * @param 	string 			$name
 	 * @param  	string 			$parent
 	 * @return 	string
-	 *
-	 * @author 	Gijs Jorissen
-	 * @since 	0.9
 	 *
 	 */
 	function build_id( $name, $parent )
