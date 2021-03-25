@@ -16,9 +16,18 @@ get_header();
 /* Start the Loop */
 while ( have_posts() ) :
 	the_post();
-
-	get_template_part( 'template-parts/content/content-single' );
-
+	if($post->post_type == 'post'){?>
+		<div class="row single-posts-row">
+			<div class="col-md-9">
+				<?php get_template_part('nextpage-templates/singlepost'); ?>	
+			</div>
+			<div class="col-md-3 sidbar-container">
+				<?php get_template_part('nextpage-templates/nextpagesidebar'); ?>
+			</div>
+		</div>
+	<?php } else{
+		get_template_part( 'template-parts/content/content-single' );
+	}
 	if ( is_attachment() ) {
 		// Parent post navigation.
 		the_post_navigation(

@@ -26,8 +26,8 @@
 		<div class="right-container">
 			<div class="links-container">
 				<?php 
-				if(class_exists('Menu_Model')){
-					$arrMenu = Menu_Model::getMainByMenu('main-menu-desktop');
+				if(class_exists('Menu_Controller')){
+					$arrMenu = Menu_Controller::getMainByMenu('main-menu-desktop');
 					if(count($arrMenu)>0){
 						foreach ($arrMenu as $arrMenuItems){	
 							?>
@@ -43,7 +43,6 @@
 			<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
 				<div>
 					<input class="search-box" type="text" value="" name="s" id="s" placeholder="Search" />
-						<!-- <input type="submit" id="searchsubmit" value="Search" /> -->
 				</div>
 			</form>
 			

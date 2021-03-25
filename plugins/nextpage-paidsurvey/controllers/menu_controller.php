@@ -1,6 +1,6 @@
 <?php 
 
-class Menu_Model {
+class Menu_Controller {
   /**
    * 
    * Function to get Wordpress Menu By Name 

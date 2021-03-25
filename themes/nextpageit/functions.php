@@ -643,10 +643,7 @@ function twentytwentyone_add_ie_class() {
 }
 add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
 
-function contentFilter($strcontent){
-	$strcontent = strip_tags($strcontent); 
-  	return substr($strcontent, 0, 300);
-}
+
 
 function getPostDate($strPostDate){
 	$strReturn = '';

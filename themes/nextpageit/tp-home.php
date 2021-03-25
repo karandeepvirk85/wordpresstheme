@@ -29,11 +29,6 @@ get_header();
                 'order' => 'DESC',
             )
         ); 
-
-        $arrRecentPosts = wp_get_recent_posts(array(
-            'numberposts' => 6, // Number of recent posts thumbnails to display
-            'post_status' => 'publish' // Show only the published posts
-        ));
     ?>
 <?php 
 
@@ -42,19 +37,15 @@ get_header();
         <div class="col-md-9">
             <div class="row posts-row">
                 <?php if ($allPostsWPQuery->have_posts()){
-                    
                     $intCount = 0;
                     while ($allPostsWPQuery->have_posts() ) : $allPostsWPQuery->the_post();
-                        $intAttachmentId = get_post_thumbnail_id($post->ID);
-                        $strImageUrl = wp_get_attachment_image_src($intAttachmentId,'full');
-                        $strImageUrl = $strImageUrl[0];
-                        $intCount++;
+                    $intCount++;
                     ?>
                         <div class="col-md-6 posts-column">
                         
                                 <div class="post-container">
                                     <div class="post-top-container">
-                                        <div class="post-image" style="background-image:url('<?php echo $strImageUrl;?>')"> </div>
+                                        <div class="post-image" style="background-image:url('<?php if(class_exists('Images_Controller')){echo Images_Controller::getPostImage($post->ID,'medium');}?>')"> </div>
                                     </div>
                                     <div class="post-bottom-container">
                                         <div class="post-meta-container">
@@ -72,7 +63,9 @@ get_header();
                                             <?php the_title(); ?>
                                         </div>
                                         <div class="post-content-container">
-                                            <?php echo contentFilter($post->post_content);?>
+                                            <?php if(class_exists('Content_Controller')){
+                                                echo Content_Controller::contentFilter($post->post_content,true,300);
+                                            }?>
                                         </div>
                                         <div class="read-more-container">
                                            <a class="read-more-link" href="<?php the_permalink()?>">Read More..</a>
@@ -90,47 +83,10 @@ get_header();
                     </div>
                 <?php } ?>
             </div>
-        </div>    
-
-        <div class="col-md-3 sidbar-container">
-            <div class="categories-container">
-                <h2>Categories</h2>
-                <?php
-
-                $arrCategories = get_categories(
-                    array(
-                        'orderby' => 'name',
-                        'parent'  => 0
-                    )   
-                );
-                
-                foreach ($arrCategories as $objCategories) {?>
-                    <p>
-                        <a href="<?php echo get_category_link( $objCategories->term_id )?>">
-                            <?php echo $objCategories->name;?>
-                        </a>
-                    </p>
-            <?php  } ?>
-           </div>
-
-           <div class="recent-post-container">
-                <h2>Recent Posts</h2>
-                <ul>
-                    <?php
-                    foreach( $arrRecentPosts as $arrRecentPost ) {
-                        ?>
-                        <li>
-                            <a href="<?php echo get_permalink($arrRecentPost['ID']) ?>"> 
-                                <p><?php echo $arrRecentPost['post_title'] ?></p>
-                                <p class="recent-post-date">
-                                    <?php echo getPostDate($arrRecentPost ['post_date'])?>
-                                </p>
-                            </a>
-                        </li>
-                    <?php } ?>
-                </ul>
-           </div>
         </div>
+        <div class="col-md-3 sidbar-container">
+            <?php get_template_part( 'nextpage-templates/nextpagesidebar' ); ?>
+        </div>    
     </div>
     <div class="row">
         <div class="col-md-12 pagination-container">

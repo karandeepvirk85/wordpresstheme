@@ -17,7 +17,7 @@ $font-montserrat: "Montserrat", sans-serif;
 $font-open-sans: "Open Sans", sans-serif;
 $font-playfair: "Playfair Display", serif;
 $primary-color: #6a3494;
-$post-link-color: #1ee08d;
+$secondary-color: #1ee08d;
 
 @mixin optional-at-root($sel) {
   @at-root #{if(not &, $sel, selector-append(&, $sel))} {
@@ -168,25 +168,84 @@ $post-link-color: #1ee08d;
 
 .page-container {
   padding: 0 8rem;
+  .product {
+    margin-top: 70px;
+    .entry-header {
+      .entry-title {
+        margin-left: 52%;
+        font-family: $font-playfair;
+        font-weight: 700;
+        color: $primary-color;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  //**WOOCOMMERECE CSS OVER RIDE*//
   .woocommerce-loop-product__title {
     color: $primary-color;
     font-weight: 700;
     font-family: $font-playfair;
     text-align: center;
   }
+  .woocommerce {
+    .woocommerce-product-gallery {
+      margin-top: -90px;
+    }
+    .woocommerce-ordering select {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+      border-radius: 10px;
+      padding: 1.2rem;
+    }
+    ul.products {
+      li {
+        text-align: center;
+        &.product {
+          .button {
+            margin-top: 1em;
+            background-color: $secondary-color;
+            border-radius: 300px;
+            padding: 20px 6rem;
+            border: none;
+            color: #ffffff;
+          }
+        }
+      }
+    }
 
-  .woocommerce ul.products li {
-    text-align: center;
-    &.product {
-      .button {
-        margin-top: 1em;
-        background-color: $primary-color;
-        border-radius: 300px;
-        border: none;
-        color: #ffffff;
+    .single-product {
+      form {
+        .single_add_to_cart_button {
+          border-radius: 300px;
+          background-color: $secondary-color;
+          padding: 0 6rem;
+        }
+        display: flex;
+        .quantity {
+          margin-right: 10px !important;
+          .qty {
+            border: 1px solid #e2e2e2;
+            padding: 1rem;
+            border-radius: 10px;
+          }
+        }
+      }
+      .product_meta {
+        span {
+          font-family: $font-montserrat;
+          font-weight: 700;
+          a {
+            font-weight: 400;
+            color: #000000;
+            font-size: 1.1rem;
+          }
+        }
       }
     }
   }
+
   h1.page-header-center {
     color: $primary-color;
     font-family: $font-playfair;
@@ -208,6 +267,7 @@ $post-link-color: #1ee08d;
             background-position: center;
             background-repeat: no-repeat;
             box-shadow: inset -2px -2px 20px 0px #000000;
+            background-size: cover;
           }
         }
         .post-bottom-container {
@@ -261,7 +321,7 @@ $post-link-color: #1ee08d;
               text-decoration: underline;
               font-weight: 700;
               font-family: $font-open-sans;
-              color: $post-link-color;
+              color: $secondary-color;
               letter-spacing: 1px;
             }
           }
@@ -305,6 +365,21 @@ $post-link-color: #1ee08d;
     }
   }
   .sidbar-container {
+    .search-box {
+      background: #fdfdfd;
+      background-image: url(images/search.svg);
+      background-position: 95% 10px;
+      background-repeat: no-repeat;
+      border: 1px solid #ebebeb;
+      box-sizing: border-box;
+      border-radius: 300px;
+      padding: 10px 2.5rem;
+      padding-left: 30px;
+      margin-bottom: 20px;
+      @include placeholder {
+        color: #b3b3b3;
+      }
+    }
     .categories-container {
       background: #ffffff;
       padding: 10px 1.5rem;
@@ -329,7 +404,7 @@ $post-link-color: #1ee08d;
     }
 
     .recent-post-container {
-      margin-top: 40px;
+      margin-top: 20px;
       background: #ffffff;
       padding: 10px 1.5rem;
       border: 1px solid rgba(0, 0, 0, 0.1);
@@ -362,5 +437,59 @@ $post-link-color: #1ee08d;
         }
       }
     }
+  }
+  .single-posts-row {
+    margin-top: 60px;
+    .single-post-container {
+      .post-title-container {
+        h1 {
+          font-size: 2rem;
+          color: $primary-color;
+          font-weight: 700;
+          margin: 0;
+          margin-bottom: 6px;
+        }
+      }
+      .post-meta-container {
+        display: flex;
+        .author-container {
+          font-weight: 700;
+          font-family: $font-montserrat;
+        }
+        .date-container {
+          font-weight: normal;
+          font-family: $font-montserrat;
+        }
+        .divider {
+          padding: 0 1rem;
+        }
+      }
+      .image-container {
+        margin-top: 10px;
+      }
+      .content-container {
+        margin-top: 10px;
+      }
+    }
+  }
+  .post-navigation {
+    .nav-links {
+      .meta-nav {
+        display: flex;
+        align-items: center;
+        color: $primary-color;
+        font-weight: 700;
+        font-family: $font-playfair;
+      }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .post-title {
+        display: none;
+      }
+    }
+  }
+  .comments-area {
+    display: none;
   }
 }

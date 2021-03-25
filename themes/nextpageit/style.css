@@ -4,10 +4,8 @@ Theme URI: https://nextpageit.com
 Author: Next Page Team
 Author URI: https://nextpageit.com
 Description: Next Page Wordpress Theme
-Requires at least: 5.3
-Tested up to: 5.6
 Requires PHP: 5.6
-Version: 1.2
+Version: 1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -146,21 +144,67 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .page-container {
   padding: 0 8rem;
 }
+.page-container .product {
+  margin-top: 70px;
+}
+.page-container .product .entry-header .entry-title {
+  margin-left: 52%;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #6a3494;
+  font-size: 2rem;
+}
 .page-container .woocommerce-loop-product__title {
   color: #6a3494;
   font-weight: 700;
   font-family: "Playfair Display", serif;
   text-align: center;
 }
+.page-container .woocommerce .woocommerce-product-gallery {
+  margin-top: -90px;
+}
+.page-container .woocommerce .woocommerce-ordering select {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 1.2rem;
+}
 .page-container .woocommerce ul.products li {
   text-align: center;
 }
 .page-container .woocommerce ul.products li.product .button {
   margin-top: 1em;
-  background-color: #6a3494;
+  background-color: #1ee08d;
   border-radius: 300px;
+  padding: 20px 6rem;
   border: none;
   color: #ffffff;
+}
+.page-container .woocommerce .single-product form {
+  display: flex;
+}
+.page-container .woocommerce .single-product form .single_add_to_cart_button {
+  border-radius: 300px;
+  background-color: #1ee08d;
+  padding: 0 6rem;
+}
+.page-container .woocommerce .single-product form .quantity {
+  margin-right: 10px !important;
+}
+.page-container .woocommerce .single-product form .quantity .qty {
+  border: 1px solid #e2e2e2;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.page-container .woocommerce .single-product .product_meta span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.page-container .woocommerce .single-product .product_meta span a {
+  font-weight: 400;
+  color: #000000;
+  font-size: 1.1rem;
 }
 .page-container h1.page-header-center {
   color: #6a3494;
@@ -180,6 +224,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: inset -2px -2px 20px 0px #000000;
+  background-size: cover;
 }
 .page-container .posts-row .posts-column .post-container .post-bottom-container {
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -271,6 +316,34 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
+.page-container .sidbar-container .search-box {
+  background: #fdfdfd;
+  background-image: url(images/search.svg);
+  background-position: 95% 10px;
+  background-repeat: no-repeat;
+  border: 1px solid #ebebeb;
+  box-sizing: border-box;
+  border-radius: 300px;
+  padding: 10px 2.5rem;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+.page-container .sidbar-container .search-box::-webkit-input-placeholder {
+  color: #b3b3b3;
+}
+
+.page-container .sidbar-container .search-box:-moz-placeholder {
+  color: #b3b3b3;
+}
+
+.page-container .sidbar-container .search-box::-moz-placeholder {
+  color: #b3b3b3;
+}
+
+.page-container .sidbar-container .search-box:-ms-input-placeholder {
+  color: #b3b3b3;
+}
+
 .page-container .sidbar-container .categories-container {
   background: #ffffff;
   padding: 10px 1.5rem;
@@ -294,7 +367,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   color: #414141;
 }
 .page-container .sidbar-container .recent-post-container {
-  margin-top: 40px;
+  margin-top: 20px;
   background: #ffffff;
   padding: 10px 1.5rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -326,6 +399,54 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 .page-container .sidbar-container .recent-post-container ul li a p.recent-post-date {
   color: #8b8b8b;
+}
+.page-container .single-posts-row {
+  margin-top: 60px;
+}
+.page-container .single-posts-row .single-post-container .post-title-container h1 {
+  font-size: 2rem;
+  color: #6a3494;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 6px;
+}
+.page-container .single-posts-row .single-post-container .post-meta-container {
+  display: flex;
+}
+.page-container .single-posts-row .single-post-container .post-meta-container .author-container {
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+.page-container .single-posts-row .single-post-container .post-meta-container .date-container {
+  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+}
+.page-container .single-posts-row .single-post-container .post-meta-container .divider {
+  padding: 0 1rem;
+}
+.page-container .single-posts-row .single-post-container .image-container {
+  margin-top: 10px;
+}
+.page-container .single-posts-row .single-post-container .content-container {
+  margin-top: 10px;
+}
+.page-container .post-navigation .nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-container .post-navigation .nav-links .meta-nav {
+  display: flex;
+  align-items: center;
+  color: #6a3494;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+}
+.page-container .post-navigation .nav-links .post-title {
+  display: none;
+}
+.page-container .comments-area {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
