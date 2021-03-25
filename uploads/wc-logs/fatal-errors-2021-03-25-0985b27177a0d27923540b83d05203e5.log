@@ -76,3 +76,7 @@ Stack trace:
 
 2021-03-25T05:41:50+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';' in /opt/lampp/htdocs/paidsurvey/wp-content/themes/nextpageit/tp-home.php on line 66
 
+2021-03-25T08:41:11+00:00 CRITICAL syntax error, unexpected '<' in /opt/lampp/htdocs/paidsurvey/wp-content/themes/nextpageit/tp-home.php on line 44
+
+2021-03-25T08:50:15+00:00 CRITICAL syntax error, unexpected '<' in /opt/lampp/htdocs/paidsurvey/wp-content/themes/nextpageit/archive.php on line 28
+

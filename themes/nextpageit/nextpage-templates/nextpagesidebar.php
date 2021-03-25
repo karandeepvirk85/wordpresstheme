@@ -20,11 +20,8 @@ $arrRecentPosts = wp_get_recent_posts(
     )
 );
 ?>
-<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-    <div>
-        <input class="search-box" type="text" value="" name="s" id="s" placeholder="Search" />
-    </div>
-</form>
+
+<?php get_template_part( 'nextpage-templates/searchform' ); ?>
 
 <div class="categories-container">
     <h2>Categories</h2>
@@ -37,6 +34,7 @@ $arrRecentPosts = wp_get_recent_posts(
             </p>
     <?php  } ?>
 </div>
+
 <div class="recent-post-container">
     <h2>Recent Posts</h2>
     <ul>

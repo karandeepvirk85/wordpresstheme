@@ -194,6 +194,24 @@ $secondary-color: #1ee08d;
     text-align: center;
   }
   .woocommerce {
+    .woocommerce-form-row {
+      .woocommerce-Input {
+        border: 2px solid #ededed;
+        padding: 1rem;
+        border-radius: 20px;
+      }
+    }
+    .form-row {
+      .woocommerce-form-login__submit {
+        background-color: $secondary-color;
+        color: white;
+        border-radius: 30px;
+        padding: 16px 6rem;
+      }
+      .woocommerce-form__label-for-checkbox {
+        margin-top: 10px;
+      }
+    }
     .woocommerce-tabs {
       ul {
         &.tabs {
