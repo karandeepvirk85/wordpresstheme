@@ -76,7 +76,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .header-container .right-container .links-container a.active-menu {
   color: #6a3494;
   font-weight: 700;
-  border-bottom: 2px solid #6a3494;
+  border: 4px solid #6a3494;
+  border-top: none;
+  border-radius: 4px;
+  border-right: transparent;
+  border-left-width: 6px;
+  border-left: transparent;
 }
 .header-container .right-container .cart-icon-container {
   padding: 10px 1rem;
@@ -159,6 +164,23 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   font-weight: 700;
   font-family: "Playfair Display", serif;
   text-align: center;
+}
+.page-container .woocommerce .woocommerce-tabs ul.tabs li::after {
+  display: none;
+}
+.page-container .woocommerce .woocommerce-tabs ul.tabs li::before {
+  display: none;
+}
+.page-container .woocommerce .woocommerce-tabs ul.tabs li.active {
+  border-radius: 0px;
+  border: none;
+  background-color: #1ee08d !important;
+}
+.page-container .woocommerce .woocommerce-tabs ul.tabs li.active a {
+  padding: 1.5rem 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-family: 700;
+  color: #ffffff !important;
 }
 .page-container .woocommerce .woocommerce-product-gallery {
   margin-top: -90px;
