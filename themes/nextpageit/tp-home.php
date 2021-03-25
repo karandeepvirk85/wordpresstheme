@@ -63,7 +63,7 @@ get_header();
                         array(
                             'base' => str_replace( $intBig, '%#%', esc_url( get_pagenum_link( $intBig ) ) ),
                             'format' => '?paged=%#%',
-                            'current' => max( 1, get_query_var('paged') ),
+                            'current' => max( 1, $paged),
                             'total' => $allPostsWPQuery->max_num_pages
                         ) 
                     );

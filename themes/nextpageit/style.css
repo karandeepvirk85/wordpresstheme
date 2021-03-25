@@ -177,7 +177,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   padding: 16px 6rem;
 }
 .page-container .woocommerce .form-row .woocommerce-form__label-for-checkbox {
-  margin-top: 10px;
+  margin-top: 12px;
 }
 .page-container .woocommerce .woocommerce-tabs ul.tabs li::after {
   display: none;
@@ -336,8 +336,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   color: #ffffff;
   background-color: #6a3494;
   padding: 8px 16px;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
   font-family: "Montserrat", sans-serif;
   font-size: 1.1rem;
 }
@@ -348,9 +346,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   font-family: "Montserrat", sans-serif;
   font-size: 1.1rem;
 }
-.page-container .pagination-container .pagination .pagination-inner a:last-child {
+.page-container .pagination-container .pagination .pagination-inner a.next {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
+}
+.page-container .pagination-container .pagination .pagination-inner a.prev {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 .page-container .sidbar-container .search-box {
   background: #fdfdfd;

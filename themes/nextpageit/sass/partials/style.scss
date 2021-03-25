@@ -209,7 +209,7 @@ $secondary-color: #1ee08d;
         padding: 16px 6rem;
       }
       .woocommerce-form__label-for-checkbox {
-        margin-top: 10px;
+        margin-top: 12px;
       }
     }
     .woocommerce-tabs {
@@ -393,8 +393,6 @@ $secondary-color: #1ee08d;
           color: #ffffff;
           background-color: $primary-color;
           padding: 8px 16px;
-          border-top-left-radius: 30px;
-          border-bottom-left-radius: 30px;
           font-family: $font-montserrat;
           font-size: 1.1rem;
         }
@@ -404,9 +402,13 @@ $secondary-color: #1ee08d;
           padding: 8px 16px;
           font-family: $font-montserrat;
           font-size: 1.1rem;
-          &:last-child {
+          &.next {
             border-top-right-radius: 30px;
             border-bottom-right-radius: 30px;
+          }
+          &.prev {
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
           }
         }
       }
