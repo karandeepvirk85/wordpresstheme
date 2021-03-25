@@ -20,7 +20,8 @@ wp_footer(); ?>
 		<div class="footer-navbar">
 			<div class="footer-links">
 				<?php 
-					$arrMenu = getMainByMenu('main-menu-desktop');
+				if(class_exists('Menu_Model')){
+					$arrMenu = Menu_Model::getMainByMenu('footer-menu');
 					if(count($arrMenu)>0){
 						foreach ($arrMenu as $arrMenuItems){
 							?>
@@ -28,7 +29,8 @@ wp_footer(); ?>
 								<?php echo $arrMenuItems['title']?>
 							</a>
 						<?php }
-					}	
+					}
+				}	
 				?>
 			</div>
 

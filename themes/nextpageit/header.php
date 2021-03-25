@@ -26,17 +26,17 @@
 		<div class="right-container">
 			<div class="links-container">
 				<?php 
-					$arrMenu = getMainByMenu('main-menu-desktop');
+				if(class_exists('Menu_Model')){
+					$arrMenu = Menu_Model::getMainByMenu('main-menu-desktop');
 					if(count($arrMenu)>0){
-						foreach ($arrMenu as $arrMenuItems){
-							
+						foreach ($arrMenu as $arrMenuItems){	
 							?>
 							<a class="<?php  echo $arrMenuItems['page_id'] === $post->ID ? "active-menu" : "";?>" id="<?php echo $arrMenuItems['ID']?>" href="<?php echo $arrMenuItems['url']?>">
 								<?php echo $arrMenuItems['title']?>
 							</a>
 						<?php }
 					}
-				
+				}
 				?>
 			</div>
 
