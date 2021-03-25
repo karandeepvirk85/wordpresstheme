@@ -87,22 +87,73 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   padding: 10px 1rem;
 }
 
+.footer-main-container {
+  padding: 0 10rem;
+  margin-top: 40px;
+}
+.footer-main-container .footer-container .footer-text-container {
+  max-width: 60%;
+  padding-top: 14px;
+  padding-left: 16px;
+}
+.footer-main-container .footer-container .footer-text-container p {
+  color: #3a3a3a;
+  font-family: "Open Sans", sans-serif;
+}
+.footer-main-container .footer-navbar {
+  display: flex;
+  padding-top: 16px;
+  padding-left: 16px;
+  justify-content: space-between;
+}
+.footer-main-container .footer-navbar .footer-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-main-container .footer-navbar .footer-links a {
+  color: #3a3a3a;
+}
+.footer-main-container .footer-navbar .footer-social-links a {
+  color: #6a3494;
+  font-size: 1.4rem;
+  padding: 3px;
+}
+
+.footer-bottom-bar {
+  background-color: #202020;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 8px 10rem;
+  margin-top: 50px;
+}
+.footer-bottom-bar .footer-left-container p {
+  color: white;
+  margin: 0;
+}
+.footer-bottom-bar .footer-right-container {
+  display: flex;
+  width: 25%;
+  justify-content: space-between;
+}
+.footer-bottom-bar .footer-right-container p {
+  color: white;
+  margin: 0;
+}
+.footer-bottom-bar .footer-right-container span {
+  color: white;
+}
+
 .page-container {
   padding: 0 8rem;
 }
-.page-container .page-header {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-.page-container .page-header h1.page-title {
-  color: #6a3494;
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 40px;
+.page-container .product {
+  margin-top: 70px;
 }
 .page-container .product .entry-header .entry-title {
+  margin-left: 52%;
   font-family: "Playfair Display", serif;
   font-weight: 700;
   color: #6a3494;
@@ -114,67 +165,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   font-family: "Playfair Display", serif;
   text-align: center;
 }
-.page-container .woocommerce .woocommerce-message {
-  border-top-color: #1ee08d;
+.page-container .woocommerce .cart-collaterals {
+  background-color: red !important;
 }
-.page-container .woocommerce .woocommerce-message .wc-forward {
-  background-color: #1ee08d;
-  color: #ffffff;
-  padding: 10px 3rem;
-  border-radius: 20px;
-}
-.page-container .woocommerce .woocommerce-message::before {
-  color: #1ee08d;
-}
-.page-container .woocommerce form.woocommerce-cart-form table.shop_table {
-  border: none;
-}
-.page-container .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td .coupon {
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
-}
-.page-container .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td .coupon #coupon_code {
-  width: 60%;
-  border: 1px solid #cfcfcf;
-  border-radius: 10px;
-  padding: 1rem;
-}
-.page-container .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td .button {
-  background-color: #1ee08d;
-  color: #ffffff;
-  padding: 10px 4rem;
-}
-.page-container .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td.product-thumbnail a img {
-  height: 100px !important;
-  width: auto !important;
-}
-.page-container .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td.product-name a {
-  font-family: "Montserrat", sans-serif;
-  color: #6a3494 !important;
-  font-weight: 700;
-}
-.page-container .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td.product-price span {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-}
-.page-container .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td.product-quantity .quantity .input-text {
-  border-radius: 6px;
-  padding: 1rem;
-  border: 1px solid #d8d8d8;
-}
-.page-container .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td.product-subtotal .woocommerce-Price-amount {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 2.5rem;
-}
-.page-container .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td.product-subtotal .woocommerce-Price-amount bdi .currencySymbol {
-  color: #6a3494;
-  font-size: 3rem;
-}
-.page-container .woocommerce .cart-collaterals .cart_totals h2 {
-  color: #6a3494;
-  font-weight: 700;
+.page-container .woocommerce .cart-collaterals .cart_totals {
+  background-color: green;
 }
 .page-container .woocommerce .cart-collaterals .cart_totals .checkout-button {
   margin-top: 1em;
@@ -214,6 +209,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   font-family: "Montserrat", sans-serif;
   font-family: 700;
   color: #ffffff !important;
+}
+.page-container .woocommerce .woocommerce-product-gallery {
+  margin-top: -90px;
 }
 .page-container .woocommerce .woocommerce-ordering select {
   background: #ffffff;
@@ -263,7 +261,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   font-family: "Playfair Display", serif;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 40px;
 }
 .page-container .entry-content {
   font-family: "Open Sans", sans-serif;
@@ -308,7 +305,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .page-container .posts-row .posts-column .post-container .post-bottom-container .post-meta-container .divider {
   padding: 0 1rem;
 }
-.page-container .posts-row .posts-column .post-container .post-bottom-container .post-title-container a {
+.page-container .posts-row .posts-column .post-container .post-bottom-container .post-title-container {
   margin-top: 10px;
   color: #6a3494;
   font-family: "Playfair Display", serif;
@@ -357,7 +354,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   font-size: 1.1rem;
 }
 .page-container .pagination-container .pagination .pagination-inner a {
-  color: #000000;
+  color: #444444;
   border: 1px solid #dadada;
   padding: 8px 16px;
   font-family: "Montserrat", sans-serif;
@@ -493,13 +490,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .page-container .post-navigation .nav-links .meta-nav {
   display: flex;
   align-items: center;
-  background: #1ee08d;
+  color: #6a3494;
   font-weight: 700;
-  color: #ffffff;
-  padding: 10px 2rem;
   font-family: "Playfair Display", serif;
-  letter-spacing: 1px;
-  border-radius: 10px;
 }
 .page-container .post-navigation .nav-links .post-title {
   display: none;
@@ -508,63 +501,4 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   display: none;
 }
 
-.footer-main-container {
-  padding: 0 10rem;
-  margin-top: 40px;
-}
-.footer-main-container .footer-container .footer-text-container {
-  max-width: 60%;
-  padding-top: 14px;
-  padding-left: 16px;
-}
-.footer-main-container .footer-container .footer-text-container p {
-  color: #3a3a3a;
-  font-family: "Open Sans", sans-serif;
-}
-.footer-main-container .footer-navbar {
-  display: flex;
-  padding-top: 16px;
-  padding-left: 16px;
-  justify-content: space-between;
-}
-.footer-main-container .footer-navbar .footer-links {
-  width: 40%;
-  display: flex;
-  justify-content: space-between;
-}
-.footer-main-container .footer-navbar .footer-links a {
-  color: #3a3a3a;
-}
-.footer-main-container .footer-navbar .footer-social-links a {
-  color: #6a3494;
-  font-size: 1.4rem;
-  padding: 3px;
-}
-
-.footer-bottom-bar {
-  background-color: #202020;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  padding: 8px 10rem;
-  margin-top: 50px;
-}
-.footer-bottom-bar .footer-left-container p {
-  color: white;
-  margin: 0;
-}
-.footer-bottom-bar .footer-right-container {
-  display: flex;
-  width: 25%;
-  justify-content: space-between;
-}
-.footer-bottom-bar .footer-right-container p {
-  color: white;
-  margin: 0;
-}
-.footer-bottom-bar .footer-right-container span {
-  color: white;
-}
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=stlye.css.map */

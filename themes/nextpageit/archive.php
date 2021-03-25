@@ -10,6 +10,8 @@
  */
 
 get_header();
+$args = array();
+$args['max_num_pages'] = $wp_query->max_num_pages;
 
 $description = get_the_archive_description();
 ?>
@@ -30,7 +32,7 @@ $description = get_the_archive_description();
 					<?php while (have_posts()){ 
 						$intCount++;
 						the_post(); 
-						get_template_part( 'nextpage-templates/allposts' );
+						get_template_part('nextpage-templates/allposts');
 						echo ($intCount % 2 == 0) ? '</div><div class="row posts-row">' : "";
 					}?>
 				</div>
@@ -38,8 +40,13 @@ $description = get_the_archive_description();
 			<div class="col-md-3 sidbar-container">
             	<?php get_template_part( 'nextpage-templates/nextpagesidebar' ); ?>
         	</div>   
-		</div>
-		<?php twenty_twenty_one_the_posts_navigation(); ?>
+		</div
+		>
+		<div class="row">
+        	<div class="col-md-12 pagination-container">
+            	<?php get_template_part( 'nextpage-templates/nextpage','custom_pagination',$args); ?>
+        	</div>
+    	</div>
 	<?php } else { ?>
 		<div class="col-md-12">
 			<p><?php _e( 'There no posts to display.' ); ?></p>

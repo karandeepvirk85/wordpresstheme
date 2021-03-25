@@ -11,7 +11,7 @@
         <div class="post-bottom-container">
             <div class="post-meta-container">
                 <div class="post-author">
-                    <?php the_author_meta('user_nicename',$post->post_author); ?>
+                    <?php echo ucwords(get_user_meta($post->post_author)['nickname'][0]); ?>
                 </div>
                 <div class="divider">
                     |
@@ -21,12 +21,14 @@
                 </div>
             </div>
             <div class="post-title-container">
-                <?php the_title(); ?>
+                <a href="<?php get_permalink($post->ID); ?>"> <?php the_title(); ?></a>
             </div>
             <div class="post-content-container">
-                <?php if(class_exists('Content_Controller')){
-                    echo Content_Controller::contentFilter($post->post_content,true,300);
-                }?>
+                <?php 
+                    if(class_exists('Content_Controller')){
+                        echo Content_Controller::contentFilter($post->post_content,true,300);
+                    }
+                ?>
             </div>
             <div class="read-more-container">
                 <a class="read-more-link" href="<?php the_permalink()?>">Read More..</a>

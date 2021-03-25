@@ -107,77 +107,26 @@ $secondary-color: #1ee08d;
     }
   }
 }
-.footer-main-container {
-  padding: 0 10rem;
-  margin-top: 40px;
-  .footer-container {
-    .footer-text-container {
-      max-width: 60%;
-      padding-top: 14px;
-      padding-left: 16px;
-      p {
-        color: #3a3a3a;
-        font-family: $font-open-sans;
-      }
-    }
-  }
-  .footer-navbar {
-    display: flex;
-    padding-top: 16px;
-    padding-left: 16px;
-    justify-content: space-between;
-    .footer-links {
-      width: 40%;
-      display: flex;
-      justify-content: space-between;
-      a {
-        color: #3a3a3a;
-      }
-    }
-    .footer-social-links {
-      a {
-        color: $primary-color;
-        font-size: 1.4rem;
-        padding: 3px;
-      }
-    }
-  }
-}
-.footer-bottom-bar {
-  background-color: #202020;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  padding: 8px 10rem;
-  margin-top: 50px;
-  .footer-left-container {
-    p {
-      color: white;
-      margin: 0;
-    }
-  }
-  .footer-right-container {
-    display: flex;
-    width: 25%;
-    justify-content: space-between;
-    p {
-      color: white;
-      margin: 0;
-    }
-    span {
-      color: white;
-    }
-  }
-}
 
 .page-container {
   padding: 0 8rem;
+  .page-header {
+    margin: 0;
+    padding: 0;
+    border: none;
+    h1 {
+      &.page-title {
+        color: $primary-color;
+        font-family: $font-playfair;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+    }
+  }
   .product {
-    margin-top: 70px;
     .entry-header {
       .entry-title {
-        margin-left: 52%;
         font-family: $font-playfair;
         font-weight: 700;
         color: $primary-color;
@@ -194,6 +143,112 @@ $secondary-color: #1ee08d;
     text-align: center;
   }
   .woocommerce {
+    .woocommerce-message {
+      border-top-color: $secondary-color;
+      .wc-forward {
+        background-color: $secondary-color;
+        color: #ffffff;
+        padding: 10px 3rem;
+        border-radius: 20px;
+      }
+      &::before {
+        color: $secondary-color;
+      }
+    }
+    form {
+      &.woocommerce-cart-form {
+        table {
+          &.shop_table {
+            border: none;
+            tbody {
+              tr {
+                td {
+                  .coupon {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 50%;
+                    #coupon_code {
+                      width: 60%;
+                      border: 1px solid rgb(207, 207, 207);
+                      border-radius: 10px;
+                      padding: 1rem;
+                    }
+                  }
+                  .button {
+                    background-color: $secondary-color;
+                    color: #ffffff;
+                    padding: 10px 4rem;
+                  }
+                }
+                &.woocommerce-cart-form__cart-item {
+                  td {
+                    &.product-thumbnail {
+                      a {
+                        img {
+                          height: 100px !important;
+                          width: auto !important;
+                        }
+                      }
+                    }
+                    &.product-name {
+                      a {
+                        font-family: $font-montserrat;
+                        color: $primary-color !important;
+                        font-weight: 700;
+                      }
+                    }
+                    &.product-price {
+                      span {
+                        font-family: $font-montserrat;
+                        font-weight: 700;
+                      }
+                    }
+                    &.product-quantity {
+                      .quantity {
+                        .input-text {
+                          border-radius: 6px;
+                          padding: 1rem;
+                          border: 1px solid rgb(216, 216, 216);
+                        }
+                      }
+                    }
+                    &.product-subtotal {
+                      .woocommerce-Price-amount {
+                        font-family: $font-montserrat;
+                        font-weight: 700;
+                        font-size: 2.5rem;
+                        bdi {
+                          .currencySymbol {
+                            color: $primary-color;
+                            font-size: 3rem;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .cart-collaterals {
+      .cart_totals {
+        h2 {
+          color: $primary-color;
+          font-weight: 700;
+        }
+        .checkout-button {
+          margin-top: 1em;
+          background-color: $secondary-color;
+          border-radius: 300px;
+          padding: 20px 6rem;
+          border: none;
+          color: #ffffff;
+        }
+      }
+    }
     .woocommerce-form-row {
       .woocommerce-Input {
         border: 2px solid #ededed;
@@ -237,9 +292,7 @@ $secondary-color: #1ee08d;
         }
       }
     }
-    .woocommerce-product-gallery {
-      margin-top: -90px;
-    }
+
     .woocommerce-ordering select {
       background: #ffffff;
       border: 1px solid rgba(0, 0, 0, 0.2);
@@ -299,6 +352,7 @@ $secondary-color: #1ee08d;
     font-family: $font-playfair;
     font-weight: 700;
     text-align: center;
+    margin-bottom: 40px;
   }
   .entry-content {
     font-family: $font-open-sans;
@@ -348,10 +402,12 @@ $secondary-color: #1ee08d;
             }
           }
           .post-title-container {
-            margin-top: 10px;
-            color: $primary-color;
-            font-family: $font-playfair;
-            font-size: 1.6rem;
+            a {
+              margin-top: 10px;
+              color: $primary-color;
+              font-family: $font-playfair;
+              font-size: 1.6rem;
+            }
           }
           .post-content-container {
             margin-top: 6px;
@@ -397,7 +453,7 @@ $secondary-color: #1ee08d;
           font-size: 1.1rem;
         }
         a {
-          color: #444444;
+          color: #000000;
           border: 1px solid #dadada;
           padding: 8px 16px;
           font-family: $font-montserrat;
@@ -527,9 +583,13 @@ $secondary-color: #1ee08d;
       .meta-nav {
         display: flex;
         align-items: center;
-        color: $primary-color;
+        background: $secondary-color;
         font-weight: 700;
+        color: #ffffff;
+        padding: 10px 2rem;
         font-family: $font-playfair;
+        letter-spacing: 1px;
+        border-radius: 10px;
       }
       display: flex;
       justify-content: space-between;
@@ -541,5 +601,68 @@ $secondary-color: #1ee08d;
   }
   .comments-area {
     display: none;
+  }
+}
+.footer-main-container {
+  padding: 0 10rem;
+  margin-top: 40px;
+  .footer-container {
+    .footer-text-container {
+      max-width: 60%;
+      padding-top: 14px;
+      padding-left: 16px;
+      p {
+        color: #3a3a3a;
+        font-family: $font-open-sans;
+      }
+    }
+  }
+  .footer-navbar {
+    display: flex;
+    padding-top: 16px;
+    padding-left: 16px;
+    justify-content: space-between;
+    .footer-links {
+      width: 40%;
+      display: flex;
+      justify-content: space-between;
+      a {
+        color: #3a3a3a;
+      }
+    }
+    .footer-social-links {
+      a {
+        color: $primary-color;
+        font-size: 1.4rem;
+        padding: 3px;
+      }
+    }
+  }
+}
+.footer-bottom-bar {
+  background-color: #202020;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 8px 10rem;
+  margin-top: 50px;
+  .footer-left-container {
+    p {
+      color: white;
+      margin: 0;
+    }
+  }
+  .footer-right-container {
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    p {
+      color: white;
+      margin: 0;
+    }
+    span {
+      color: white;
+    }
   }
 }

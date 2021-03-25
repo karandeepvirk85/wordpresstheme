@@ -6,19 +6,10 @@ get_header();
 ?>
 
 <div class="page-container container">
-<?php get_template_part( 'template-parts/header/entry-header' ); ?>
-<?php get_template_part( 'template-parts/content/content-page' ); ?>
     <?php 
-        if (get_query_var('paged')){
-            $paged = get_query_var('paged');
-        } 
-        elseif (get_query_var('page')){
-            $paged = get_query_var('page');
-        } 
-        else {
-            $paged = 1;
-        }
-        
+        get_template_part( 'template-parts/header/entry-header' ); 
+        get_template_part( 'template-parts/content/content-page' ); 
+
         $allPostsWPQuery = new WP_Query(
             array(
                 'post_type'=>'post', 
@@ -28,7 +19,9 @@ get_header();
                 'orderby'   => 'date',
                 'order' => 'DESC',
             )
-        ); 
+        );
+        
+        $args = (array) $allPostsWPQuery; 
     ?>
     <div class="row">
         <div class="col-md-9">
@@ -48,28 +41,15 @@ get_header();
                 <?php } ?>
             </div>
         </div>
+
         <div class="col-md-3 sidbar-container">
-            <?php get_template_part( 'nextpage-templates/nextpagesidebar' ); ?>
+            <?php get_template_part( 'nextpage-templates/nextpagesidebar'); ?>
         </div>    
     </div>
+
     <div class="row">
         <div class="col-md-12 pagination-container">
-            <div class="pagination">
-                <div class="pagination-inner">
-                    <?php 
-                    $intBig = 999999999; // need an unlikely integer
-
-                    echo paginate_links(
-                        array(
-                            'base' => str_replace( $intBig, '%#%', esc_url( get_pagenum_link( $intBig ) ) ),
-                            'format' => '?paged=%#%',
-                            'current' => max( 1, $paged),
-                            'total' => $allPostsWPQuery->max_num_pages
-                        ) 
-                    );
-                    ?>
-                </div>
-            </div>
+            <?php get_template_part( 'nextpage-templates/nextpage','custom_pagination',$args); ?>
         </div>
     </div>
 </div>

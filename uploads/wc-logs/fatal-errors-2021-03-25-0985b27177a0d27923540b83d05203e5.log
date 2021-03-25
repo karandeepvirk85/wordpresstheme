@@ -80,3 +80,7 @@ Stack trace:
 
 2021-03-25T08:50:15+00:00 CRITICAL syntax error, unexpected '<' in /opt/lampp/htdocs/paidsurvey/wp-content/themes/nextpageit/archive.php on line 28
 
+2021-03-25T12:02:46+00:00 CRITICAL Object of class WP_Query could not be converted to string in /opt/lampp/htdocs/paidsurvey/wp-includes/general-template.php on line 184
+
+2021-03-25T12:02:47+00:00 CRITICAL Object of class WP_Query could not be converted to string in /opt/lampp/htdocs/paidsurvey/wp-includes/general-template.php on line 184
+
