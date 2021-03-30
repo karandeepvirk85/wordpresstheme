@@ -10,8 +10,11 @@
  */
 
 get_header();
-$args = array();
-$args['max_num_pages'] = $wp_query->max_num_pages;
+
+$args = array(
+	'paged' => $paged,
+	'max_num_pages' => $wp_query->max_num_pages
+);
 
 $description = get_the_archive_description();
 ?>

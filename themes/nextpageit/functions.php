@@ -10,9 +10,13 @@
  */
 
 // This theme requires WordPress 5.3 or later.
-
+add_action('init', 'includeThemeControllers');
 add_action( 'wp_enqueue_scripts', 'themeStyles');
 add_action( 'wp_enqueue_scripts', 'themeScripts');
+
+function includeThemeControllers(){
+	include_once(get_template_directory().'/controllers/theme_controller.php');
+}
 
 function themeStyles() {
 	wp_enqueue_style('font-awesome','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');

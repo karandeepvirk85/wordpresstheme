@@ -3,6 +3,7 @@
  * Template Name: Home 
  */
 get_header();
+$paged = Theme_Controller::getPagedQuery();
 ?>
 
 <div class="page-container container">
@@ -12,16 +13,19 @@ get_header();
 
         $allPostsWPQuery = new WP_Query(
             array(
-                'post_type'=>'post', 
-                'post_status'=>'publish', 
-                'posts_per_page'=>6,
-                'paged' => $paged,
-                'orderby'   => 'date',
-                'order' => 'DESC',
+                'post_type'     =>'post', 
+                'post_status'   =>'publish', 
+                'posts_per_page'=> 6,
+                'paged'         => $paged,
+                'orderby'       => 'date',
+                'order'         => 'DESC',
             )
         );
         
-        $args = (array) $allPostsWPQuery; 
+        $args = array(
+            'paged' => $paged,
+            'max_num_pages' => $allPostsWPQuery->max_num_pages
+        );
     ?>
     <div class="row">
         <div class="col-md-9">
@@ -43,7 +47,8 @@ get_header();
         </div>
 
         <div class="col-md-3 sidbar-container">
-            <?php get_template_part( 'nextpage-templates/nextpagesidebar'); ?>
+            <!-------INLUDE SIDE BAR------->
+            <?php  get_template_part('nextpage-templates/nextpagesidebar');?>
         </div>    
     </div>
 
