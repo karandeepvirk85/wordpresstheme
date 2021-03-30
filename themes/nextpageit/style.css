@@ -10,6 +10,16 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 @import url(https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap);
+::-moz-selection {
+  color: #ffffff;
+  background: #6a3494;
+}
+
+::selection {
+  color: #ffffff;
+  background: #6a3494;
+}
+
 .top-notification-bar {
   background-color: #202020;
 }
@@ -23,7 +33,50 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   padding: 4px;
 }
 
-.header-container {
+.header-container-mobile .top-mobile-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 2rem 16px 0;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #6a3494;
+}
+.header-container-mobile .top-mobile-container i {
+  font-size: 3rem;
+  color: #6a3494;
+  transition: 500ms;
+}
+.header-container-mobile .top-mobile-container i.rotate {
+  transform: rotate(-90deg);
+}
+.header-container-mobile .bottom-links-container {
+  border-bottom: 2px solid #6b4894;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header-container-mobile .bottom-links-container.open-menu {
+  display: flex;
+}
+.header-container-mobile .bottom-links-container a {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  line-height: 18px;
+  color: #000000;
+  width: 100%;
+  text-align: left;
+  padding: 20px;
+  border-bottom: 1px solid;
+}
+@media screen and (min-width: 500px) {
+  .header-container-mobile {
+    display: none;
+  }
+}
+
+.header-container-desktop {
   padding: 0 10rem 16px 10rem;
   justify-content: space-between;
   display: flex;
@@ -31,35 +84,40 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   width: 100%;
   border-bottom: 1px solid #6a3494;
 }
+.header-container-desktop .left-container .logo-container .site-logo {
+  text-align: center;
+}
 @media screen and (max-width: 1010px) {
-  .header-container {
+  .header-container-desktop {
     display: block;
     border-bottom: none;
     justify-content: center;
     padding: 0;
   }
 }
-.header-container .left-container .logo-container .site-logo {
-  text-align: center;
+@media screen and (max-width: 500px) {
+  .header-container-desktop {
+    display: none;
+  }
 }
-.header-container .right-container {
+.header-container-desktop .right-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
 @media screen and (max-width: 768px) {
-  .header-container .right-container {
+  .header-container-desktop .right-container {
     flex-direction: column;
   }
 }
-.header-container .right-container form {
+.header-container-desktop .right-container form {
   padding: 10px 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.header-container .right-container form .search-box {
+.header-container-desktop .right-container form .search-box {
   background: #fdfdfd;
   background-image: url(images/search.svg);
   background-position: 95% 10px;
@@ -71,35 +129,35 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   padding-left: 30px;
   margin-top: auto;
 }
-.header-container .right-container form .search-box::-webkit-input-placeholder {
+.header-container-desktop .right-container form .search-box::-webkit-input-placeholder {
   color: #b3b3b3;
 }
 
-.header-container .right-container form .search-box:-moz-placeholder {
+.header-container-desktop .right-container form .search-box:-moz-placeholder {
   color: #b3b3b3;
 }
 
-.header-container .right-container form .search-box::-moz-placeholder {
+.header-container-desktop .right-container form .search-box::-moz-placeholder {
   color: #b3b3b3;
 }
 
-.header-container .right-container form .search-box:-ms-input-placeholder {
+.header-container-desktop .right-container form .search-box:-ms-input-placeholder {
   color: #b3b3b3;
 }
 
 @media screen and (max-width: 768px) {
-  .header-container .right-container form .search-box {
+  .header-container-desktop .right-container form .search-box {
     margin-top: 14px;
   }
 }
-.header-container .right-container .links-container a {
+.header-container-desktop .right-container .links-container a {
   padding: 10px 1.5rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.3rem;
   color: #000000;
 }
-.header-container .right-container .links-container a.active-menu {
+.header-container-desktop .right-container .links-container a.active-menu {
   color: #6a3494;
   font-weight: 700;
   border: 4px solid #6a3494;
@@ -109,7 +167,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   border-left-width: 6px;
   border-left: transparent;
 }
-.header-container .right-container .cart-icon-container {
+.header-container-desktop .right-container .cart-icon-container {
   padding: 10px 1rem;
 }
 
@@ -166,8 +224,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   border: 1px solid #e9e9e9;
 }
 .page-container .woocommerce form .form-row input.input-text {
-  padding: 1rem;
   border-radius: 10px;
+  padding: 1rem;
   border: 1px solid #e9e9e9;
 }
 .page-container .woocommerce #payment #place_order {
@@ -459,6 +517,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .page-container .pagination-container .pagination .pagination-inner a.prev {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+}
+@media screen and (max-width: 1010px) {
+  .page-container .sidbar-container .search-box {
+    display: none;
+  }
 }
 .page-container .sidbar-container .cart-icon-container {
   display: none;

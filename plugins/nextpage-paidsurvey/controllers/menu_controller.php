@@ -2,7 +2,6 @@
 
 class Menu_Controller {
   /**
-   * 
    * Function to get Wordpress Menu By Name 
    * */  
   public static function getMainByMenu($strMenuName){

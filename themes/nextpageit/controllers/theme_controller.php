@@ -24,5 +24,20 @@ class Theme_Controller{
         $strReturn = $strPostDate; 
         return $strPostDate;
     }
+
+    public static function getPostImage($intPostId, $strSIze){
+        $intAttachmentId = get_post_thumbnail_id($intPostId);
+        $strImageUrl = wp_get_attachment_image_src($intAttachmentId, $strSIze);
+        $strImageUrl = $strImageUrl[0];
+        return $strImageUrl;
+    }
+
+    public static function contentFilter($strcontent,$bolStripTags,$intLength=300){
+        if($bolStripTags){
+            $strcontent = strip_tags($strcontent); 
+            $strcontent = substr($strcontent, 0, $intLength);
+        }
+        return $strcontent;
+    }
 }
 ?>

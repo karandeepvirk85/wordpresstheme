@@ -42,7 +42,14 @@ $secondary-color: #1ee08d;
     @content;
   }
 }
-
+::-moz-selection {
+  color: #ffffff;
+  background: $primary-color;
+}
+::selection {
+  color: #ffffff;
+  background: $primary-color;
+}
 .top-notification-bar {
   background-color: $top-notification-bar-background;
   p {
@@ -55,25 +62,71 @@ $secondary-color: #1ee08d;
     padding: 4px;
   }
 }
-.header-container {
+.header-container-mobile {
+  .top-mobile-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 2rem 16px 0;
+    align-items: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid $primary-color;
+    i {
+      font-size: 3rem;
+      color: $primary-color;
+      transition: 500ms;
+      &.rotate {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+  .bottom-links-container {
+    border-bottom: 2px solid #6b4894;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &.open-menu {
+      display: flex;
+    }
+
+    a {
+      cursor: pointer;
+      font-family: $font-montserrat;
+      font-size: 2rem;
+      line-height: 18px;
+      color: #000000;
+      width: 100%;
+      text-align: left;
+      padding: 20px;
+      border-bottom: 1px solid;
+    }
+  }
+  @media screen and (min-width: 500px) {
+    display: none;
+  }
+}
+.header-container-desktop {
   padding: 0 10rem 16px 10rem;
   justify-content: space-between;
   display: flex;
   align-items: center;
   width: 100%;
   border-bottom: 1px solid $primary-color;
-  @media screen and (max-width: 1010px) {
-    display: block;
-    border-bottom: none;
-    justify-content: center;
-    padding: 0;
-  }
   .left-container {
     .logo-container {
       .site-logo {
         text-align: center;
       }
     }
+  }
+  @media screen and (max-width: 1010px) {
+    display: block;
+    border-bottom: none;
+    justify-content: center;
+    padding: 0;
+  }
+  @media screen and (max-width: 500px) {
+    display: none;
   }
   .right-container {
     display: flex;
@@ -194,8 +247,8 @@ $secondary-color: #1ee08d;
         }
         input {
           &.input-text {
-            padding: 1rem;
             border-radius: 10px;
+            padding: 1rem;
             border: 1px solid #e9e9e9;
           }
         }
@@ -565,6 +618,11 @@ $secondary-color: #1ee08d;
     }
   }
   .sidbar-container {
+    @media screen and (max-width: 1010px) {
+      .search-box {
+        display: none;
+      }
+    }
     .cart-icon-container {
       display: none;
     }

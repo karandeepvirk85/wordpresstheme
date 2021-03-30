@@ -28,11 +28,11 @@ foreach ($objTerms as $objTerm){
         </div>
     </div>
     <div class="image-container">
-        <img class="img-responsive" src="<?php if(class_exists('Images_Controller')){echo Images_Controller::getPostImage($post->ID,'full');}?>">
+        <img class="img-responsive" src="<?php if(class_exists('Theme_Controller')){echo Theme_Controller::getPostImage($post->ID,'full');}?>">
     </div>
     <div class="content-container">
-        <?php if(class_exists('Content_Controller')){
-            echo Content_Controller::contentFilter($post->post_content,false);
+        <?php if(class_exists('Theme_Controller')){
+            echo Theme_Controller::contentFilter($post->post_content,false);
         }?>
     </div>
 </div>

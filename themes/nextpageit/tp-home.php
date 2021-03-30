@@ -10,9 +10,11 @@ if(class_exists('Theme_Controller')){
 
 <div class="page-container container">
     <?php 
+        // Include Entry Header
         get_template_part( 'template-parts/header/entry-header' ); 
+        // Include Page Content
         get_template_part( 'template-parts/content/content-page' ); 
-
+        // Get Posts Query
         $allPostsWPQuery = new WP_Query(
             array(
                 'post_type'     =>'post', 
@@ -23,12 +25,13 @@ if(class_exists('Theme_Controller')){
                 'order'         => 'DESC',
             )
         );
-        
+        // Set Args for Pagination
         $args = array(
             'paged' => $paged,
             'max_num_pages' => $allPostsWPQuery->max_num_pages
         );
     ?>
+    
     <div class="row">
         <div class="col-md-9">
             <div class="row posts-row">
@@ -55,6 +58,7 @@ if(class_exists('Theme_Controller')){
     </div>
 
     <div class="row">
+        <!-------INLUDE PAGINATION------->
         <div class="col-md-12 pagination-container">
             <?php get_template_part( 'nextpage-templates/nextpage','custom_pagination',$args); ?>
         </div>

@@ -6,7 +6,7 @@
 <div class="col-md-6 posts-column">
     <div class="post-container">
         <div class="post-top-container">
-            <div class="post-image" style="background-image:url('<?php if(class_exists('Images_Controller')){echo Images_Controller::getPostImage($post->ID,'medium');}?>')"> </div>
+            <div class="post-image" style="background-image:url('<?php if(class_exists('Theme_Controller')){echo Theme_Controller::getPostImage($post->ID,'medium');}?>')"></div>
         </div>
         <div class="post-bottom-container">
             <div class="post-meta-container">
@@ -21,12 +21,12 @@
                 </div>
             </div>
             <div class="post-title-container">
-                <a href="<?php get_permalink($post->ID); ?>"> <?php the_title(); ?></a>
+                <a href="<?php echo get_permalink($post->ID); ?>"> <?php the_title(); ?></a>
             </div>
             <div class="post-content-container">
                 <?php 
-                    if(class_exists('Content_Controller')){
-                        echo Content_Controller::contentFilter($post->post_content,true,300);
+                    if(class_exists('Theme_Controller')){
+                        echo Theme_Controller::contentFilter($post->post_content,true,300);
                     }
                 ?>
             </div>
