@@ -52,22 +52,42 @@ $secondary-color: #1ee08d;
     color: #ffffff;
     text-align: center;
     font-size: 1rem;
-    padding: 6px;
+    padding: 4px;
   }
 }
 .header-container {
   padding: 0 10rem 16px 10rem;
-  display: flex;
   justify-content: space-between;
+  display: flex;
   align-items: center;
   width: 100%;
   border-bottom: 1px solid $primary-color;
+  @media screen and (max-width: 1010px) {
+    display: block;
+    border-bottom: none;
+    justify-content: center;
+    padding: 0;
+  }
+  .left-container {
+    .logo-container {
+      .site-logo {
+        text-align: center;
+      }
+    }
+  }
   .right-container {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
     form {
       padding: 10px 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       .search-box {
         background: #fdfdfd;
         background-image: url(images/search.svg);
@@ -78,8 +98,12 @@ $secondary-color: #1ee08d;
         border-radius: 300px;
         padding: 10px 2.5rem;
         padding-left: 30px;
+        margin-top: auto;
         @include placeholder {
           color: #b3b3b3;
+        }
+        @media screen and (max-width: 768px) {
+          margin-top: 14px;
         }
       }
     }
@@ -110,6 +134,9 @@ $secondary-color: #1ee08d;
 
 .page-container {
   padding: 0 8rem;
+  @media screen and (max-width: 768px) {
+    padding: 0 2rem;
+  }
   .page-header {
     margin: 0;
     padding: 0;
@@ -493,6 +520,9 @@ $secondary-color: #1ee08d;
     }
   }
   .sidbar-container {
+    .cart-icon-container {
+      display: none;
+    }
     .search-box {
       background: #fdfdfd;
       background-image: url(images/search.svg);
@@ -627,11 +657,17 @@ $secondary-color: #1ee08d;
 .footer-main-container {
   padding: 0 10rem;
   margin-top: 40px;
+  @media screen and (max-width: 768px) {
+    padding: 0 1rem;
+  }
   .footer-container {
     .footer-text-container {
       max-width: 60%;
       padding-top: 14px;
       padding-left: 16px;
+      @media screen and (max-width: 1010px) {
+        max-width: 100%;
+      }
       p {
         color: #3a3a3a;
         font-family: $font-open-sans;
@@ -643,15 +679,27 @@ $secondary-color: #1ee08d;
     padding-top: 16px;
     padding-left: 16px;
     justify-content: space-between;
+    flex-direction: row;
+    @media screen and (max-width: 1010px) {
+      flex-direction: column;
+    }
     .footer-links {
       width: 40%;
       display: flex;
       justify-content: space-between;
+      flex-direction: row;
       a {
         color: #3a3a3a;
       }
+      @media screen and (max-width: 1010px) {
+        flex-direction: column;
+        width: 100%;
+      }
     }
     .footer-social-links {
+      @media screen and (max-width: 1010px) {
+        margin-top: 20px;
+      }
       a {
         color: $primary-color;
         font-size: 1.4rem;
@@ -668,6 +716,10 @@ $secondary-color: #1ee08d;
   flex-direction: row;
   padding: 8px 10rem;
   margin-top: 50px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 8px 3rem;
+  }
   .footer-left-container {
     p {
       color: white;
@@ -676,7 +728,6 @@ $secondary-color: #1ee08d;
   }
   .footer-right-container {
     display: flex;
-    width: 25%;
     justify-content: space-between;
     p {
       color: white;
@@ -684,6 +735,7 @@ $secondary-color: #1ee08d;
     }
     span {
       color: white;
+      margin: 0 10px;
     }
   }
 }

@@ -20,24 +20,44 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   color: #ffffff;
   text-align: center;
   font-size: 1rem;
-  padding: 6px;
+  padding: 4px;
 }
 
 .header-container {
   padding: 0 10rem 16px 10rem;
-  display: flex;
   justify-content: space-between;
+  display: flex;
   align-items: center;
   width: 100%;
   border-bottom: 1px solid #6a3494;
 }
+@media screen and (max-width: 1010px) {
+  .header-container {
+    display: block;
+    border-bottom: none;
+    justify-content: center;
+    padding: 0;
+  }
+}
+.header-container .left-container .logo-container .site-logo {
+  text-align: center;
+}
 .header-container .right-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .header-container .right-container {
+    flex-direction: column;
+  }
+}
 .header-container .right-container form {
   padding: 10px 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .header-container .right-container form .search-box {
   background: #fdfdfd;
@@ -49,6 +69,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   border-radius: 300px;
   padding: 10px 2.5rem;
   padding-left: 30px;
+  margin-top: auto;
 }
 .header-container .right-container form .search-box::-webkit-input-placeholder {
   color: #b3b3b3;
@@ -66,6 +87,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   color: #b3b3b3;
 }
 
+@media screen and (max-width: 768px) {
+  .header-container .right-container form .search-box {
+    margin-top: 14px;
+  }
+}
 .header-container .right-container .links-container a {
   padding: 10px 1.5rem;
   font-family: "Montserrat", sans-serif;
@@ -89,6 +115,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 .page-container {
   padding: 0 8rem;
+}
+@media screen and (max-width: 768px) {
+  .page-container {
+    padding: 0 2rem;
+  }
 }
 .page-container .page-header {
   margin: 0;
@@ -390,6 +421,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
+.page-container .sidbar-container .cart-icon-container {
+  display: none;
+}
 .page-container .sidbar-container .search-box {
   background: #fdfdfd;
   background-image: url(images/search.svg);
@@ -530,10 +564,20 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   padding: 0 10rem;
   margin-top: 40px;
 }
+@media screen and (max-width: 768px) {
+  .footer-main-container {
+    padding: 0 1rem;
+  }
+}
 .footer-main-container .footer-container .footer-text-container {
   max-width: 60%;
   padding-top: 14px;
   padding-left: 16px;
+}
+@media screen and (max-width: 1010px) {
+  .footer-main-container .footer-container .footer-text-container {
+    max-width: 100%;
+  }
 }
 .footer-main-container .footer-container .footer-text-container p {
   color: #3a3a3a;
@@ -544,14 +588,32 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   padding-top: 16px;
   padding-left: 16px;
   justify-content: space-between;
+  flex-direction: row;
+}
+@media screen and (max-width: 1010px) {
+  .footer-main-container .footer-navbar {
+    flex-direction: column;
+  }
 }
 .footer-main-container .footer-navbar .footer-links {
   width: 40%;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
 }
 .footer-main-container .footer-navbar .footer-links a {
   color: #3a3a3a;
+}
+@media screen and (max-width: 1010px) {
+  .footer-main-container .footer-navbar .footer-links {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1010px) {
+  .footer-main-container .footer-navbar .footer-social-links {
+    margin-top: 20px;
+  }
 }
 .footer-main-container .footer-navbar .footer-social-links a {
   color: #6a3494;
@@ -568,13 +630,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   padding: 8px 10rem;
   margin-top: 50px;
 }
+@media screen and (max-width: 768px) {
+  .footer-bottom-bar {
+    flex-direction: column;
+    padding: 8px 3rem;
+  }
+}
 .footer-bottom-bar .footer-left-container p {
   color: white;
   margin: 0;
 }
 .footer-bottom-bar .footer-right-container {
   display: flex;
-  width: 25%;
   justify-content: space-between;
 }
 .footer-bottom-bar .footer-right-container p {
@@ -583,6 +650,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 .footer-bottom-bar .footer-right-container span {
   color: white;
+  margin: 0 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

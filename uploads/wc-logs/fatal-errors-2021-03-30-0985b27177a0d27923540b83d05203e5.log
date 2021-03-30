@@ -17,3 +17,23 @@ Stack trace:
 
 2021-03-30T05:21:51+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in /opt/lampp/htdocs/paidsurvey/wp-content/themes/nextpageit/archive.php on line 18
 
+2021-03-30T05:32:24+00:00 CRITICAL syntax error, unexpected 'public' (T_PUBLIC), expecting end of file in /opt/lampp/htdocs/paidsurvey/wp-content/themes/nextpageit/controllers/theme_controller.php on line 21
+
+2021-03-30T05:34:48+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) in /opt/lampp/htdocs/paidsurvey/wp-content/themes/nextpageit/nextpage-templates/allposts.php on line 20
+
+2021-03-30T05:35:30+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) in /opt/lampp/htdocs/paidsurvey/wp-content/themes/nextpageit/nextpage-templates/nextpagesidebar.php on line 47
+
+2021-03-30T05:35:30+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) in /opt/lampp/htdocs/paidsurvey/wp-content/themes/nextpageit/nextpage-templates/nextpagesidebar.php on line 47
+
+2021-03-30T05:35:43+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';' in /opt/lampp/htdocs/paidsurvey/wp-content/themes/nextpageit/nextpage-templates/nextpagesidebar.php on line 47
+
+2021-03-30T05:35:44+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';' in /opt/lampp/htdocs/paidsurvey/wp-content/themes/nextpageit/nextpage-templates/nextpagesidebar.php on line 47
+
+2021-03-30T05:36:09+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';' in /opt/lampp/htdocs/paidsurvey/wp-content/themes/nextpageit/nextpage-templates/nextpagesidebar.php on line 47
+
+2021-03-30T05:36:10+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';' in /opt/lampp/htdocs/paidsurvey/wp-content/themes/nextpageit/nextpage-templates/nextpagesidebar.php on line 47
+
+2021-03-30T05:36:59+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) in /opt/lampp/htdocs/paidsurvey/wp-content/themes/nextpageit/nextpage-templates/singlepost.php on line 23
+
+2021-03-30T05:37:16+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';' in /opt/lampp/htdocs/paidsurvey/wp-content/themes/nextpageit/nextpage-templates/singlepost.php on line 23
+
