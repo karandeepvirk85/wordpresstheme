@@ -114,14 +114,26 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   font-family: "Playfair Display", serif;
   text-align: center;
 }
+.page-container .woocommerce .woocommerce-info {
+  border-top-color: #1ee08d;
+}
+.page-container .woocommerce .woocommerce-info::before {
+  color: #1ee08d;
+}
+.page-container .woocommerce .return-to-shop .wc-backward {
+  background-color: #1ee08d;
+  color: #ffffff;
+  padding: 16px 6rem;
+  border-radius: 100px;
+}
 .page-container .woocommerce .woocommerce-message {
   border-top-color: #1ee08d;
 }
 .page-container .woocommerce .woocommerce-message .wc-forward {
   background-color: #1ee08d;
   color: #ffffff;
-  padding: 10px 3rem;
-  border-radius: 20px;
+  padding: 16px 6rem;
+  border-radius: 100px;
 }
 .page-container .woocommerce .woocommerce-message::before {
   color: #1ee08d;
@@ -140,10 +152,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   border-radius: 10px;
   padding: 1rem;
 }
-.page-container .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td .button {
+.page-container .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td .coupon .button {
   background-color: #1ee08d;
   color: #ffffff;
   padding: 10px 4rem;
+  border-radius: 100px;
+}
+.page-container .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td .button {
+  background-color: #1ee08d;
+  color: #ffffff;
+  padding: 15px 5rem;
+  border-radius: 100px;
 }
 .page-container .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td.product-thumbnail a img {
   height: 100px !important;
@@ -179,8 +198,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .page-container .woocommerce .cart-collaterals .cart_totals .checkout-button {
   margin-top: 1em;
   background-color: #1ee08d;
-  border-radius: 300px;
-  padding: 20px 6rem;
+  border-radius: 100px;
+  padding: 15px 6rem;
   border: none;
   color: #ffffff;
 }
@@ -228,8 +247,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .page-container .woocommerce ul.products li.product .button {
   margin-top: 1em;
   background-color: #1ee08d;
-  border-radius: 300px;
-  padding: 20px 6rem;
+  border-radius: 100px;
+  padding: 15px 6rem;
   border: none;
   color: #ffffff;
 }
@@ -237,9 +256,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   display: flex;
 }
 .page-container .woocommerce .single-product form .single_add_to_cart_button {
-  border-radius: 300px;
+  border-radius: 100px;
   background-color: #1ee08d;
-  padding: 0 6rem;
+  padding: 15px 6rem;
 }
 .page-container .woocommerce .single-product form .quantity {
   margin-right: 10px !important;
@@ -486,6 +505,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   margin-top: 10px;
 }
 .page-container .post-navigation .nav-links {
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -496,10 +516,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   background: #1ee08d;
   font-weight: 700;
   color: #ffffff;
-  padding: 10px 2rem;
-  font-family: "Playfair Display", serif;
-  letter-spacing: 1px;
-  border-radius: 10px;
+  padding: 16px 5rem;
+  border-radius: 100px;
 }
 .page-container .post-navigation .nav-links .post-title {
   display: none;

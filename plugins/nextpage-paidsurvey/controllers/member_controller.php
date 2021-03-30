@@ -14,8 +14,8 @@ Class Member_Controller {
     );
 
     public function __construct() {
-        static::createPostType();
-        static::createMetaBoxes();
+        //static::createPostType();
+        //static::createMetaBoxes();
     }
 
     /**

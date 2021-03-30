@@ -17,7 +17,7 @@
                     |
                 </div>
                 <div class="post-date">
-                    <?php echo getPostDate($post->post_date);?>
+                    <?php if(class_exists('Theme_Controller')){echo Theme_Controller::getPostDate($post->post_date);}?>
                 </div>
             </div>
             <div class="post-title-container">

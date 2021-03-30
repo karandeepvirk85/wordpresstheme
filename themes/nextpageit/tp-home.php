@@ -3,7 +3,9 @@
  * Template Name: Home 
  */
 get_header();
-$paged = Theme_Controller::getPagedQuery();
+if(class_exists('Theme_Controller')){
+    $paged = Theme_Controller::getPagedQuery();
+}
 ?>
 
 <div class="page-container container">

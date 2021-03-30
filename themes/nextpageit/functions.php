@@ -646,13 +646,3 @@ function twentytwentyone_add_ie_class() {
 	<?php
 }
 add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
-
-
-
-function getPostDate($strPostDate){
-	$strReturn = '';
-	$strPostDate = strtotime($strPostDate);
-	$strPostDate = date('d M, Y',$strPostDate);
-	$strReturn = $strPostDate; 
-	return $strPostDate;
-}

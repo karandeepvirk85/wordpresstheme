@@ -44,7 +44,7 @@ $arrRecentPosts = wp_get_recent_posts(
                 <a href="<?php echo get_permalink($arrRecentPost['ID']) ?>">
                     <p><?php echo $arrRecentPost['post_title'] ?></p>
                     <p class="recent-post-date">
-                        <?php echo getPostDate($arrRecentPost ['post_date'])?>
+                        <?php if(class_exists('Theme_Controller')){ echo Theme_Controller::getPostDate($arrRecentPost ['post_date']);}?>
                     </p>
                 </a>
             </li>

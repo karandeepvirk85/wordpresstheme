@@ -1,5 +1,5 @@
 <?php
-if( ! defined( 'ABSPATH' ) ) exit; 
+if(!defined('ABSPATH')) exit; 
 class Theme_Controller{
     public function __construct() {
 
@@ -16,6 +16,13 @@ class Theme_Controller{
         }
         return $paged;
     }
-
+    
+    public static function getPostDate($strPostDate){
+        $strReturn = '';
+        $strPostDate = strtotime($strPostDate);
+        $strPostDate = date('d M, Y',$strPostDate);
+        $strReturn = $strPostDate; 
+        return $strPostDate;
+    }
 }
 ?>

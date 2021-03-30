@@ -143,13 +143,27 @@ $secondary-color: #1ee08d;
     text-align: center;
   }
   .woocommerce {
+    .woocommerce-info {
+      &::before {
+        color: $secondary-color;
+      }
+      border-top-color: $secondary-color;
+    }
+    .return-to-shop {
+      .wc-backward {
+        background-color: $secondary-color;
+        color: #ffffff;
+        padding: 16px 6rem;
+        border-radius: 100px;
+      }
+    }
     .woocommerce-message {
       border-top-color: $secondary-color;
       .wc-forward {
         background-color: $secondary-color;
         color: #ffffff;
-        padding: 10px 3rem;
-        border-radius: 20px;
+        padding: 16px 6rem;
+        border-radius: 100px;
       }
       &::before {
         color: $secondary-color;
@@ -173,11 +187,19 @@ $secondary-color: #1ee08d;
                       border-radius: 10px;
                       padding: 1rem;
                     }
+
+                    .button {
+                      background-color: $secondary-color;
+                      color: #ffffff;
+                      padding: 10px 4rem;
+                      border-radius: 100px;
+                    }
                   }
                   .button {
                     background-color: $secondary-color;
                     color: #ffffff;
-                    padding: 10px 4rem;
+                    padding: 15px 5rem;
+                    border-radius: 100px;
                   }
                 }
                 &.woocommerce-cart-form__cart-item {
@@ -242,8 +264,8 @@ $secondary-color: #1ee08d;
         .checkout-button {
           margin-top: 1em;
           background-color: $secondary-color;
-          border-radius: 300px;
-          padding: 20px 6rem;
+          border-radius: 100px;
+          padding: 15px 6rem;
           border: none;
           color: #ffffff;
         }
@@ -307,8 +329,8 @@ $secondary-color: #1ee08d;
           .button {
             margin-top: 1em;
             background-color: $secondary-color;
-            border-radius: 300px;
-            padding: 20px 6rem;
+            border-radius: 100px;
+            padding: 15px 6rem;
             border: none;
             color: #ffffff;
           }
@@ -319,9 +341,9 @@ $secondary-color: #1ee08d;
     .single-product {
       form {
         .single_add_to_cart_button {
-          border-radius: 300px;
+          border-radius: 100px;
           background-color: $secondary-color;
-          padding: 0 6rem;
+          padding: 15px 6rem;
         }
         display: flex;
         .quantity {
@@ -580,16 +602,15 @@ $secondary-color: #1ee08d;
   }
   .post-navigation {
     .nav-links {
+      margin-top: 20px;
       .meta-nav {
         display: flex;
         align-items: center;
         background: $secondary-color;
         font-weight: 700;
         color: #ffffff;
-        padding: 10px 2rem;
-        font-family: $font-playfair;
-        letter-spacing: 1px;
-        border-radius: 10px;
+        padding: 16px 5rem;
+        border-radius: 100px;
       }
       display: flex;
       justify-content: space-between;
